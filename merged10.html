@@ -451,6 +451,19 @@
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
+/* הוראות ביצוע – צבע טקסט מותאם לכל מצב */
+#modalInstructions {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eaeaea; /* ברירת מחדל – בהיר (מצב כהה) */
+}
+
+@media (prefers-color-scheme: light) {
+  #modalInstructions {
+    color: #222;  /* כהה יותר במצב בהיר */
+  }
+}
+
     </style>
 
 </head>
@@ -504,18 +517,13 @@
                         <img id="modalImage" class="exercise-img" src="" alt="תמונה של התרגיל">
                     </div>
                     <div class="row g-3">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-12">
                             <div class="info-card p-3">
                                 <h6>הוראות ביצוע</h6>
                                 <div id="modalInstructions">—</div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="info-card p-3">
-                                <h6>זמן/חזרות</h6>
-                                <div id="modalTimeReps">—</div>
-                            </div>
-                        </div>
+
                     </div>
 
                     <!------->
@@ -875,6 +883,10 @@ buildCategoriesGrid();
   document.getElementById('modalMuscle').textContent = ex.muscle || '—';
   document.getElementById('modalTimeChip').textContent = ex.timeReps || '—';
   document.getElementById('modalEmoji').textContent = emojiForCategory(category);
+
+
+  // הוראות ביצוע
+  document.getElementById('modalInstructions').textContent = ex.instructions || '—';
 
   // טיימר (כמו שהיה)
   resetTimer();
