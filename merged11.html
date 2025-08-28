@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>יאללה לזוז</title>
+    <link rel="icon" 
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+<script src="workouts.js"></script>
+
+</head>
+
+<body>
+
+  
+
+
+    <div class="container my-3">
+        <div class="hero">
+  <div class="hero-head d-flex align-items-center justify-content-between">
+    <h2 class="m-0">יאללה לזוז 💪</h2>
+    <button class="btn btn-sm btn-ghost" id="muteBtn" aria-pressed="false" title="השתק צליל">🔊</button>
+  </div>
+</div>
+
+
+        <!-- Tabs לבחירת סוג אימון -->
+        <div id="workoutTabs" class="mb-3"></div>
+
+        <!-- רשת האימונים (ברירת מחדל מוצג) -->
+        <div id="workoutsGrid" class="row g-3 g-md-4"></div>
+
+        <!-- תצוגת האימון הנבחר (בהתחלה מוסתר) -->
+        <div id="workoutDetail" class="d-none"></div>
+
+    </div>
+
+
+    <div class="modal fade" id="exerciseModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-heading">
+                        <div class="mh-emoji" id="modalEmoji">💪</div>
+                        <div>
+                            <h5 class="modal-title" id="modalTitle">הדגמת תרגיל</h5>
+                            <div class="modal-subchips">
+                                <span class="badge-chip" id="modalMuscle">—</span>
+                                <span class="badge-chip" id="modalTimeChip">—</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="סגור"
+                        onclick="onModalClose()"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="exercise-img-wrap mb-3">
+                        <img id="modalImage" class="exercise-img" src="" alt="תמונה של התרגיל">
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-12">
+                            <div class="info-card p-3">
+                                <h6>הוראות ביצוע</h6>
+                                <div id="modalInstructions">—</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!------->
+
+                    <div id="controlsWrapper" class="controls collapsed mt-3">
+                        <!-- ידית תחתונה ממורכזת: מציגה "הצג טיימר ▲" כשהטיימר סגור,
+       ו"‏הסתר ▼" כשהטיימר פתוח -->
+                        <div class="controls-handle">
+                            <button id="controlsShowBtn" class="handle-btn" type="button" onclick="expandControls()"
+                                aria-expanded="false" aria-controls="timerControls">הצג טיימר ▲</button>
+
+                            <button id="controlsHideBtn" class="handle-btn" type="button" onclick="collapseControls()"
+                                aria-expanded="true" aria-controls="timerControls">הסתר ▼</button>
+                        </div>
+
+                        <!-- בקרות הטיימר -->
+                        <div id="timerControls" class="controls-bar">
+                            <div class="container-fluid">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-12 col-lg-3">
+                                        <div id="timerDisplay" class="timer-display">0</div>
+                                        <div class="text-center mt-1">
+                                            <span class="badge text-bg-info me-1" id="suggestSeconds">משך מוצע: —</span>
+                                            <span class="badge text-bg-secondary" id="suggestRounds">סטים: 1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(15)">15 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(30)">30 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(60)">60 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(120)">120 שנ׳</button>
+  <button id="startSuggestedBtn" class="btn btn-success btn-wide d-none"
+    onclick="startSuggested()">לפי התרגיל</button>
+</div>
+
+                                    </div>
+                                    <div class="col-12 col-lg-3">
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                            <button class="btn btn-warning btn-wide" id="pauseBtn"
+                                                onclick="togglePause()">PAUSE</button>
+                                            <button class="btn btn-danger btn-wide"
+                                                onclick="resetTimer()">RESET</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="beep" preload="auto">
+        <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===== נתונים =====
+        const CATEGORIES = [
+            "חימום כללי", "אירובי", "חימום ייעודי", "אימון כח", "אימון שיווי משקל", "אימון ליבה", "מתיחות"
+        ];
+        // תמונת ברירת מחדל 1x1 שקופה (מונעת 404 אם לא סופקה תמונה לתרגיל)
+        const DEFAULT_IMAGE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+
+   
+
+
+        // אייקון/אימוג'י לכל קטגוריה
+        const CAT_ICON = {
+            "חימום כללי": "🔥",
+            "אירובי": "🏃‍♂️",
+            "חימום ייעודי": "🎯",
+            "אימון כח": "🏋️‍♀️",
+            "אימון שיווי משקל": "🧘‍♂️",
+            "אימון ליבה": "🫀",
+            "מתיחות": "🧶"
+        };
+
+        let selectedType = 'gym';           // 'gym' או 'home'
+let selectedWorkoutId = null;       // id של אימון פתוח כרגע (או null)
+
+
+
+// עוזר לריבוי/יחיד
+function formatCount(n) {
+  return n === 1 ? 'אימון 1' : `${n} אימונים`;
+}
+
+// משרטט את הטאבים העליונים ומחבר קליקים
+function renderWorkoutTabs(active = 'gym') {
+  selectedType = active;  // ← חשוב: לעדכן את הבחירה הגלובלית
+  const tabs = document.getElementById('workoutTabs');
+  if (!tabs) return;
+
+  const gymCount  = Array.isArray(WORKOUTS?.gym)  ? WORKOUTS.gym.length  : 0;
+  const homeCount = Array.isArray(WORKOUTS?.home) ? WORKOUTS.home.length : 0;
+
+  tabs.innerHTML = `
+    <ul class="nav nav-pills justify-content-center gap-2 flex-wrap">
+      <li class="nav-item">
+        <button id="tab-gym" type="button"
+          class="nav-link ${selectedType === 'gym' ? 'active' : ''}">
+          💪 חדר כושר
+          <span class="badge rounded-pill bg-secondary ms-1">${formatCount(gymCount)}</span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="tab-home" type="button"
+          class="nav-link ${selectedType === 'home' ? 'active' : ''}">
+          🏠 בית
+          <span class="badge rounded-pill bg-secondary ms-1">${formatCount(homeCount)}</span>
+        </button>
+      </li>
+    </ul>
+  `;
+
+  // מאזינים
+  document.getElementById('tab-gym')?.addEventListener('click', () => {
+    renderWorkoutTabs('gym');   // יעדכן selectedType
+    renderWorkoutList();        // יבנה לפי selectedType
+    showListHideDetail();
+  });
+  document.getElementById('tab-home')?.addEventListener('click', () => {
+    renderWorkoutTabs('home');  // יעדכן selectedType
+    renderWorkoutList();        // יבנה לפי selectedType
+    showListHideDetail();
+  });
+}
+
+
+function selectType(type){
+  if (type===selectedType) return;
+  selectedType = type;
+  selectedWorkoutId = null;
+  renderWorkoutTabs();
+  renderWorkoutList();
+  showListHideDetail();
+}
+function renderWorkoutList() {
+  const root = document.getElementById('workoutsGrid');
+  if (!root) return;
+
+  // בחר את המערך לפי הטאב הפעיל (selectedType)
+  const arr = Array.isArray(WORKOUTS?.[selectedType]) ? WORKOUTS[selectedType] : [];
+
+  // נקה תוכן קודם
+  root.innerHTML = '';
+
+  // אין אימונים? הצג הודעה עדינה
+  if (arr.length === 0) {
+    root.innerHTML = `
+      <div class="col-12">
+        <div class="text-center text-muted py-4">אין אימונים להצגה כרגע.</div>
+      </div>`;
+    return;
+  }
+
+  // בנה כרטיס לכל אימון
+  arr.forEach(w => {
+    const col = document.createElement('div');
+    col.className = 'col-12 col-md-6 col-lg-4';
+
+    col.innerHTML = `
+      <div class="workout-card">
+        <div class="w-emoji">${w.emoji || '💪'}</div>
+        <div class="flex-grow-1">
+          <div class="w-title">${w.title || 'אימון ללא שם'}</div>
+          <div class="w-meta">
+            ${w.minutes ? `${w.minutes} דק׳ · ` : ''}${Object.keys(w.plan || {}).length} קטגוריות
+          </div>
+        </div>
+        <button class="btn btn-sm btn-ghost start-workout" type="button" data-id="${w.id}">התחל</button>
+      </div>
+    `;
+
+    // חיבור מאזין לחצן "התחל" (נמנע מ-inline JS)
+    col.querySelector('.start-workout')?.addEventListener('click', (e) => {
+      const id = e.currentTarget.getAttribute('data-id');
+      if (id) openWorkout(id);
+    });
+
+    root.appendChild(col);
+  });
+}
+
+function openWorkout(id){
+  const group = WORKOUTS[selectedType] || [];
+  const workout = group.find(w => w.id === id);
+  if (!workout) return;
+  selectedWorkoutId = id;
+
+  // Header + גוף
+  const detail = document.getElementById('workoutDetail');
+  detail.innerHTML = `
+    <div class="workout-head">
+      <button class="back-btn" type="button" onclick="backToList()">← חזרה</button>
+      <h3 class="mb-0">${workout.emoji || '💪'} ${workout.title}</h3>
+      <span class="ms-2 text-secondary">${workout.minutes? `${workout.minutes} דק׳` : ''}</span>
+    </div>
+    <div id="wd-body" class="row g-3 g-md-4"></div>
+  `;
+
+  // מציירים את גריד הקטגוריות לתוך wd-body מתוך plan של האימון
+  buildPlanGrid(workout.plan, 'wd-body');
+
+  showDetailHideList();
+}
+function backToList(){
+  selectedWorkoutId = null;
+  showListHideDetail();
+}
+function showDetailHideList(){
+  document.getElementById('workoutsGrid').classList.add('d-none');
+  document.getElementById('workoutDetail').classList.remove('d-none');
+  document.getElementById('workoutTabs')?.classList.add('d-none');
+}
+function showListHideDetail(){
+  document.getElementById('workoutDetail').classList.add('d-none');
+  document.getElementById('workoutsGrid').classList.remove('d-none');
+  document.getElementById('workoutTabs')?.classList.remove('d-none');
+
+}
+
+
+        function emojiForCategory(cat) {
+            return (typeof CAT_ICON !== 'undefined' && CAT_ICON[cat]) ? CAT_ICON[cat] : '💪';
+        }
+
+
+      function buildPlanGrid(plan, mountId){
+  const grid = document.getElementById(mountId);
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  // סדר לפי CATEGORIES, מציג רק קטגוריות שמופיעות ב-plan
+  CATEGORIES.forEach(cat => {
+    const list = (plan && plan[cat]) ? plan[cat] : null;
+    if (!list || !list.length) return;
+
+    const cardCol = document.createElement('div');
+    cardCol.className = 'col-12 col-md-6 col-lg-4';
+    cardCol.innerHTML = `
+      <div class="cat-card h-100" data-cat="${cat}">
+        <div class="cat-header">
+          <div class="cat-emoji">${CAT_ICON[cat] || "🏷️"}</div>
+          <div class="cat-title">${cat}</div>
+          <div class="cat-meta">${list.length} תרגילים</div>
+        </div>
+        <div class="cat-body" id="cat-body-${slug(cat)}"></div>
+        <div class="cat-footer">
+          <button class="btn-link-muted" type="button" onclick="toggleAll('${slug(cat)}')">כל התרגילים</button>
+        </div>
+      </div>`;
+    grid.appendChild(cardCol);
+
+    const body = cardCol.querySelector(`#cat-body-${slug(cat)}`);
+    list.forEach((ex, i) => {
+      const row = document.createElement('button');
+      row.className = 'ex-mini w-100 text-start btn btn-link';
+      row.type = 'button';
+      if (i > 2) { row.dataset.hidden = '1'; row.style.display = 'none'; }
+      row.innerHTML = `
+        <img class="ex-thumb" loading="lazy" alt="" src="${ex.image || ''}">
+        <div class="flex-grow-1">
+          <div class="ex-name">${ex.name}</div>
+          <div class="ex-sub">${ex.muscle} · ${ex.timeReps || ''}</div>
+        </div>`;
+      row.addEventListener('click', () => openExercise(ex, cat));
+      body.appendChild(row);
+    });
+  });
+}
+
+
+        function slug(s) { return (s || '').replace(/\s+/g, '-').replace(/[^\u0590-\u05FF\w-]/g, ''); }
+
+        // פותח/סוגר “כל התרגילים” בתוך כרטיס
+        function toggleAll(slugId) {
+            const body = document.getElementById(`cat-body-${slugId}`);
+            if (!body) return;
+            const hidden = [...body.querySelectorAll('[data-hidden="1"]')];
+            const isClosed = hidden.some(el => el.style.display === 'none');
+            hidden.forEach(el => el.style.display = isClosed ? '' : 'none');
+        }
+
+        // בנה במקום האקורדיון הישן
+        renderWorkoutTabs();
+renderWorkoutList();
+showListHideDetail();
+
+
+        // ===== Modal + timer logic =====
+        const exerciseModal = new bootstrap.Modal(document.getElementById('exerciseModal'));
+        let suggestedSeconds = null, suggestedRounds = 1;
+        let countdown = null, timeLeft = 0, isPaused = false, isRunning = false, remainingRounds = 1;
+        let muted = false;
+
+        document.getElementById('muteBtn').addEventListener('click', () => {
+            muted = !muted;
+            const btn = document.getElementById('muteBtn');
+            btn.textContent = muted ? '🔇' : '🔊';
+            btn.setAttribute('aria-pressed', String(muted));
+        });
+
+        function openExercise(ex, category) {
+            // תמונה
+            document.getElementById('modalImage').src = ex.image || DEFAULT_IMAGE;
+
+            // כותרת + תתי־שבבים
+            document.getElementById('modalTitle').textContent = `הדגמת תרגיל: ${ex.name}`;
+            document.getElementById('modalMuscle').textContent = ex.muscle || '—';
+            document.getElementById('modalTimeChip').textContent = ex.timeReps || '—';
+            document.getElementById('modalEmoji').textContent = emojiForCategory(category);
+
+
+            // הוראות ביצוע
+            document.getElementById('modalInstructions').textContent = ex.instructions || '—';
+
+            // טיימר (כמו שהיה)
+            resetTimer();
+            const { seconds, rounds } = parseTimeReps(ex.timeReps);
+            suggestedSeconds = seconds; suggestedRounds = rounds;
+            document.getElementById('timerDisplay').textContent = seconds || 0;
+            document.getElementById('suggestSeconds').textContent = seconds ? `משך מוצע: ${seconds} שניות` : 'משך מוצע: —';
+            document.getElementById('suggestRounds').textContent = `סטים: ${rounds}`;
+            document.getElementById('startSuggestedBtn').classList.toggle('d-none', !seconds);
+
+            collapseControls();   // להשאיר: ברירת מחדל – הטיימר סגור
+            exerciseModal.show();
+        }
+
+
+        function parseTimeReps(str) {
+            if (!str) return { seconds: 0, rounds: 1 };
+            const minMatch = str.match(/(\d+)\s*(?:דק(?:ה|ות)?)/);
+            const secMatch = str.match(/(\d+)\s*(?:שנ(?:י(?:ה|ות)?)?|ש׳)/);
+            const multMatch = str.match(/[×xX]\s*(\d+)/);
+            const minutes = minMatch ? parseInt(minMatch[1], 10) : 0;
+            const secondsOnly = secMatch ? parseInt(secMatch[1], 10) : 0;
+            const seconds = minutes * 60 + secondsOnly;
+            const rounds = multMatch ? parseInt(multMatch[1], 10) : 1;
+            return { seconds, rounds };
+        }
+
+        function startTimer(seconds, rounds = 1) {
+            resetTimer();
+            remainingRounds = Math.max(1, rounds);
+            timeLeft = seconds; isPaused = false; isRunning = true;
+            document.getElementById('pauseBtn').textContent = 'PAUSE';
+            updateDisplay(timeLeft);
+            countdown = setInterval(tick, 1000);
+        }
+        function startSuggested() { if (!suggestedSeconds) return; startTimer(suggestedSeconds, suggestedRounds); }
+
+        function tick() {
+            if (!isPaused && isRunning) {
+                timeLeft--; updateDisplay(timeLeft);
+                if (timeLeft <= 0) {
+                    playBeep();
+                    clearInterval(countdown); countdown = null; remainingRounds--;
+                    if (remainingRounds > 0) {
+                        setTimeout(() => { if (!isRunning) return; timeLeft = suggestedSeconds || timeLeft; updateDisplay(timeLeft); countdown = setInterval(tick, 1000); }, 800);
+                    } else {
+                        isRunning = false; document.getElementById('pauseBtn').textContent = 'PAUSE'; document.getElementById('timerDisplay').textContent = '✔️';
+                    }
+                }
+            }
+        }
+
+        function togglePause() { if (!isRunning) return; isPaused = !isPaused; document.getElementById('pauseBtn').textContent = isPaused ? 'RESUME' : 'PAUSE'; }
+        function resetTimer() { if (countdown) { clearInterval(countdown); countdown = null; } isPaused = false; isRunning = false; timeLeft = 0; remainingRounds = 1; updateDisplay(0); document.getElementById('pauseBtn').textContent = 'PAUSE'; stopBeep(); }
+        function updateDisplay(v) { document.getElementById('timerDisplay').textContent = v; }
+
+        function playBeep() {
+            if (muted) return;
+            const beep = document.getElementById('beep');
+            beep.pause(); beep.currentTime = 0; beep.play().catch(() => { });
+        }
+        function stopBeep() { const beep = document.getElementById('beep'); beep.pause(); beep.currentTime = 0; }
+
+        function onModalClose() {
+            resetTimer();
+            document.getElementById('modalImage').src = '';
+            document.getElementById('modalInstructions').textContent = '—';
+            collapseControls();            // ← להחזיר למצב סגור כברירת מחדל
+        }
+
+
+        const controlsWrapper = document.getElementById('controlsWrapper');
+
+        function expandControls() {
+            if (!controlsWrapper) return;
+            controlsWrapper.classList.remove('collapsed');
+            document.getElementById('controlsShowBtn')?.setAttribute('aria-expanded', 'true');
+            document.getElementById('controlsHideBtn')?.setAttribute('aria-expanded', 'true');
+        }
+
+        function collapseControls() {
+            if (!controlsWrapper) return;
+            controlsWrapper.classList.add('collapsed');
+            document.getElementById('controlsShowBtn')?.setAttribute('aria-expanded', 'false');
+            document.getElementById('controlsHideBtn')?.setAttribute('aria-expanded', 'false');
+        }
+
+renderWorkoutTabs();   // יגדיר selectedType='gym' כברירת מחדל
+renderWorkoutList();   // יבנה על סמך selectedType
+showListHideDetail();  // מצב “רשימה”
+
+    </script>
+</body>
+
+</html>
