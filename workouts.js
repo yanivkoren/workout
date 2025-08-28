@@ -2,6 +2,165 @@
 const WORKOUTS = {
     gym: [
         {
+      id: 'U1',
+      title: 'שבוע 1 - U (עליון)',
+      emoji: '🏋️‍♀️',
+      minutes: 80,
+      plan: {
+        "אירובי": [
+          {
+            muscle: "אירובי כללי",
+            name: "הליכה / ריצה על הליכון<br>Treadmill Walk / Run",
+            timeReps: "20 דקות",
+            instructions: "",
+            image: "https://liftmanual.com/wp-content/uploads/2023/04/run-on-treadmill.gif"
+          }
+        ],
+ 
+        "חימום ייעודי": [
+                      {
+            muscle: "חימום – כתפיים",
+            name: "סיבובי כתפיים<br>Arm Circles",
+            timeReps: "10 קדימה + 10 אחורה",
+            instructions: "עמוד זקוף כאשר הרגליים ברוחב אגן הברכיים מעט כפופות והבטן אסופה. הרם את הידיים לצדדים עד לגובה הכתפיים והתחל לבצע סיבובים קטנים או בינוניים קדימה עם שתי הידיים בו זמנית. חשוב לשמור שהתנועה תהיה איטית ומבוקרת ולא להפוך אותה לניפנוף חסר שליטה. לאחר מכן בצע סיבובים לאחור. לאורך כל התרגיל הקפד על נשימה סדירה ורציפה.",
+            image: "https://fitnessprogramer.com/wp-content/uploads/2021/07/Arm-Circles_Shoulders.gif"
+          },
+          {
+            muscle: "חימום – גב עליון",
+            name: "כיווץ שכמות<br>Scapular Retraction",
+            timeReps: "12 חזרות",
+            instructions: "עמוד זקוף עם רגליים ברוחב אגן זרועות מתוחות קדימה בגובה הכתפיים וכפות הידיים פונות זו אל זו. משוך את השכמות לאחור ולקרב אותן זו לזו תוך שמירה על מרפקים ישרים. החזק לרגע את הכיווץ ושחרר קדימה בצורה איטית ומבוקרת. שמור על גב ניטרלי ובטן אסופה לאורך כל התרגיל.",
+            image: "https://www.garagegymreviews.com/wp-content/uploads/standing-scapular-retraction.gif"
+          },
+          {
+            muscle: "חימום – כתף אמצעית",
+            name: "הרחקת ידיים לצדדים עם גומייה<br>Lateral Raise with Band",
+            timeReps: "12–15 חזרות",
+            instructions: "עמוד על גומייה או אחוז אותה בידיים כשכפות הידיים לצד הגוף. שמור על מרפקים מעט כפופים והרם את הידיים לצדדים עד לגובה הכתפיים. עצור לרגע בחלק העליון ותרד לאט ובשליטה למטה. יש להימנע מתנופה ולשמור על תנועה חלקה לאורך כל הביצוע.",
+            image: "https://musclemagfitness.com/wp-content/uploads/lateral-raises-with-bands-exercise.gif"
+          },
+          {
+            muscle: "חימום – חזה",
+            name: "שכיבות סמיכה קלות / על ספסל<br>Incline Push-Ups",
+            timeReps: "8–10 חזרות",
+            instructions: "הנח ידיים על ספסל או משטח מוגבה בגובה אגן חזה רגליים לאחור בקו ישר. כופף מרפקים והורד את החזה לכיוון הספסל תוך שמירה על גוף ישר ובטן אסופה. דחוף חזרה מעלה עד יישור ידיים. בצע את התרגיל בקצב איטי ומבוקר ושמור על נשימה רציפה.",
+            image: "https://cdn.jefit.com/assets/img/exercises/gifs/1055.gif"
+          },
+          {
+            muscle: "חימום – בייספס",
+            name: "כפיפת מרפקים עם גומייה<br>Banded Curl",
+            timeReps: "12 חזרות",
+            instructions: "אחוז בגומייה בשתי ידיים כשהיא דרוכה מתחת לרגליים. שמור על מרפקים צמודים לגוף וכפוף את המרפקים כלפי מעלה עד שהגומייה מגיעה לגובה הכתפיים. עצור לרגע בחלק העליון ותרד באיטיות מטה. חשוב לשמור על תנועה מבוקרת ללא נדנוד גב.",
+            image: "https://musclemagfitness.com/wp-content/uploads/resistance-band-reverse-grip-curls-exercise.gif"
+          },
+          {
+            muscle: "חימום – טרייספס",
+            name: "פשיטת מרפקים עם גומייה<br>Banded Triceps Pushdown",
+            timeReps: "12 חזרות",
+            instructions: "חבר את הגומייה לנקודת עיגון גבוהה. אחוז אותה בשתי ידיים כשהמרפקים צמודים לגוף. דחוף את הגומייה מטה עד ליישור מלא של המרפקים. עצור לרגע וחזור לאט כלפי מעלה. הקפד שהכתפיים נשארות יציבות ולא עולות במהלך התנועה.",
+            image: "https://musclemagfitness.com/wp-content/uploads/tricep-pushdown-with-bands-exercise.gif"
+          },
+          {
+            muscle: "חימום – יציבות כתף",
+            name: "Face Pull עם גומייה<br>Face Pull with Band",
+            timeReps: "10–12 חזרות",
+            instructions: "חבר את הגומייה לנקודה בגובה הפנים. אחוז את הקצוות ומשוך אותן לאחור לגובה הפנים תוך פתיחת המרפקים לצדדים. כווץ את שרירי השכמות ועצור לרגע בסוף התנועה. חזור לאט לנקודת ההתחלה תוך שמירה על תנועה חלקה ומבוקרת.",
+            image: "https://www.strengthlog.com/wp-content/uploads/2025/04/banded-face-pull.gif"
+          }
+        ],
+        "אימון כח": [
+          {
+            muscle: "גב – משיכה אנכית",
+            name: "משיכת פולי עליון באחיזה הפוכה<br>Reverse Grip Lat Pulldown",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "שב מול מכשיר הפולי כשהברכיים מקובעות מתחת לכריות. אחוז את המוט באחיזה הפוכה כאשר כפות הידיים מופנות אליך ברוחב כתפיים. שמור על גב זקוף ומשוך את המוט כלפי החזה תוך שמירה על מרפקים קרובים לגוף. עצור לרגע בחלק התחתון וחזור לאט כלפי מעלה עד יישור ידיים מלא.",
+            image: "https://musclemagfitness.com/wp-content/uploads/Cable-Reverse-grip-Straight-Back-Seated-High-Row-Back.gif"
+          },
+          {
+            muscle: "חזה אמצעי",
+            name: "לחיצת חזה במוט<br>Barbell Bench Press",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "שכב על ספסל שטוח עם כפות רגליים יציבות על הרצפה. אחוז את המוט ברוחב מעט גדול מרוחב הכתפיים. הורד את המוט באיטיות אל החזה האמצעי תוך שמירה על כתפיים אחורה וחזה פתוח. דחוף את המוט מעלה עד ליישור מלא של הידיים. שמור על גב תחתון יציב ונגיעה קלה בלבד במוט בחזה.",
+            image: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif"
+          },
+          {
+            muscle: "כתף אמצעית",
+            name: "הרחקה במכונה<br>Machine Lateral Raise",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "שב במכונה עם גב צמוד למשענת וכתפיים משוחררות. אחוז בידיות או הנח את המרפקים על הכריות. הרם את הזרועות לצדדים עד לגובה הכתפיים ועצור לרגע. הורד את הידיים באיטיות חזרה מטה. חשוב לשמור על תנועה מבוקרת וללא ניפנוף.",
+            image: "https://musclemagfitness.com/wp-content/uploads/lever-lateral-raise-exercise.gif"
+          },
+          {
+            muscle: "בייספס – ראש ארוך",
+            name: "כפיפת פטיש<br>Hammer Curl",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "עמוד זקוף עם משקולת יד בכל יד כאשר כפות הידיים פונות זו מול זו. שמור על מרפקים צמודים לגוף וכפוף את המרפקים כלפי מעלה עד שהמשקולות מתקרבות לכתפיים. עצור לרגע למעלה ותרד באיטיות מטה. שמור על גוף יציב ללא נדנוד.",
+            image: "https://burnfit.io/wp-content/uploads/2023/11/DB_HAM_CURL.gif"
+          },
+          {
+            muscle: "טרייספס – ראש ארוך",
+            name: "שבירת גולגולת<br>Skull Crusher (EZ Bar)",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "שכב על ספסל שטוח עם מוט EZ בידיים ישרות מעל החזה. כופף את המרפקים והורד את המוט באיטיות לכיוון המצח או מעל הראש תוך שמירה על מרפקים יציבים וקרובים. מתח את הטרייספס ויישר את הידיים חזרה למעלה. בצע את התנועה באיטיות ובשליטה מלאה.",
+            image: "https://burnfit.io/wp-content/uploads/2023/11/SKULL_CRUSH.gif"
+          },
+          {
+            muscle: "ייצוב כתף",
+            name: "הרמות Y<br>Y-Raise",
+            timeReps: "3 סטים × 12 חזרות",
+            instructions: "שכב על ספסל משופע עם הפנים כלפי מטה ומשקולות קלות בידיים. שמור על זרועות ישרות והרם אותן באלכסון כלפי מעלה כך שהגוף והידיים יוצרים צורת Y. עצור לרגע למעלה וכווץ את השכמות. הורד את הידיים חזרה לאט ובשליטה. שמור על גב תחתון ניטרלי ובטן אסופה.",
+            image: "https://barbend.com/wp-content/uploads/2023/05/y-raise-barbend-movement-gif-masters.gif"
+          }
+        ],
+        "מתיחות": [
+          {
+            muscle: "גב – מתיחה",
+            name: "מתיחת לטיסימוס<br>Lat Stretch (Wall/Bar)",
+            timeReps: "20–30 שניות × 2",
+            instructions: "עמוד מול קיר או מוט ואחוז אותו בשתי ידיים בגובה החזה. התרחק לאחור והטה את פלג הגוף העליון קדימה כך שהגב יתארך ותרגיש מתיחה בצידי הגב. שמור על ברכיים מעט כפופות ונשום עמוק לאורך המתיחה.",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEMdRZrt3ClSSFSWVz4GxRparzS2NpnzL3Zw&s"
+          },
+          {
+            muscle: "חזה – מתיחה",
+            name: "מתיחת חזה בפתח דלת<br>Doorway Chest Stretch",
+            timeReps: "20–30 שניות × 2",
+            instructions: "עמוד בפתח דלת והנח את כפות הידיים על המשקוף בגובה הכתפיים. צעד קדימה בעדינות עד שתרגיש מתיחה בחזה ובכתפיים הקדמיות. שמור על גב זקוף וחזה פתוח. החזק את המתיחה ונשום בצורה רגועה.",
+            image: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Standing-one-arm-chest-stretch.gif"
+          },
+          {
+            muscle: "כתפיים – מתיחה",
+            name: "מתיחת כתף צולבת<br>Cross-Body Shoulder Stretch",
+            timeReps: "20–30 שניות לכל צד",
+            instructions: "עמוד זקוף והעבר יד אחת ישרה מול הגוף בגובה הכתפיים. אחוז את היד השנייה במרפק ומשך את היד ישרה קרוב יותר לחזה עד שתרגיש מתיחה בכתף האחורית. שמור על כתפיים רפויות והחזק את המתיחה בנשימה רגועה.",
+            image: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Across-Chest-Shoulder-Stretch.gif"
+          },
+          {
+            muscle: "בייספס – מתיחה",
+            name: "מתיחת בייספס על קיר<br>Biceps Wall Stretch",
+            timeReps: "20–30 שניות לכל יד",
+            instructions: "עמוד לצד קיר והנח עליו את כף היד מאחורי הגוף כשהאצבעות פונות לאחור. סובב בעדינות את הגוף קדימה עד שתרגיש מתיחה לאורך החזה והזרוע הקדמית. שמור על כתף משוחררת ונשום עמוק.",
+            image: "https://newlife.com.cy/wp-content/uploads/2019/11/10581301-Standing-one-arm-chest-stretch_Chest_360.gif"
+          },
+          {
+            muscle: "טרייספס – מתיחה",
+            name: "מתיחת טרייספס מעל הראש<br>Overhead Triceps Stretch",
+            timeReps: "20–30 שניות לכל יד",
+            instructions: "הרם יד אחת מעלה וכופף את המרפק כך שהאצבעות פונות כלפי הגב. בעזרת היד השנייה משוך בעדינות את המרפק פנימה לכיוון הראש עד שתרגיש מתיחה בזרוע האחורית. שמור על גב זקוף ובטן אסופה.",
+            image: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2020/04/Overhead-triceps-stretch.gif"
+          },
+          {
+            muscle: "שכמות – מתיחה",
+            name: "מתיחת שכמות (Child’s Pose)<br>Child’s Pose / Cat Stretch",
+            timeReps: "20–30 שניות",
+            instructions: "כרע על הרצפה בעמידת שש ואז שב לאחור על העקבים. מתח את הידיים קדימה ככל שתוכל והנח את המצח על הרצפה. הרגש מתיחה לאורך הגב והשכמות. שמור על נשימה עמוקה ורציפה לכל אורך המתיחה.",
+            image: "https://i.ytimg.com/vi/rE9i-ghDDPU/hq720.jpg"
+          }
+        ]
+      }
+    }
+        ,
+
+        {
             id: 'g1', title: 'אימון 1', emoji: '🏋️‍♀️', minutes: 25, plan:
             {
                 "חימום כללי": [
