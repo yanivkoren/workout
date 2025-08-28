@@ -185,7 +185,7 @@
       osc.frequency.value = frequency;
 
       // envelope רך
-      gain.gain.setValueAtTime(0.22, now);
+      gain.gain.setValueAtTime(0.11, now);
       gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
 
       osc.connect(gain).connect(ctx.destination);
@@ -474,10 +474,10 @@
 
         // 🎵 ספירה קולית בשלוש השניות האחרונות
         if (timeLeft === 3 || timeLeft === 2 || timeLeft === 1) {
-          playBeep(330, 0.18);           // ביפ קצר רגיל
+          playBeep(110, 0.10);           // ביפ קצר רגיל
         }
         if (timeLeft === 0) {
-          playBeep(660, 0.25);           // ביפ גבוה בסיום
+          playBeep(330, 0.10);           // ביפ גבוה בסיום
         }
 
         if (timeLeft <= 0) {
@@ -504,11 +504,7 @@
     function resetTimer() { if (countdown) { clearInterval(countdown); countdown = null; } isPaused = false; isRunning = false; timeLeft = 0; remainingRounds = 1; updateDisplay(0); document.getElementById('pauseBtn').textContent = 'PAUSE'; stopBeep(); }
     function updateDisplay(v) { document.getElementById('timerDisplay').textContent = v; }
 
-    function playBeep() {
-      if (muted) return;
-      const beep = document.getElementById('beep');
-      beep.pause(); beep.currentTime = 0; beep.play().catch(() => { });
-    }
+
     function stopBeep() { const beep = document.getElementById('beep'); beep.pause(); beep.currentTime = 0; }
 
     function onModalClose() {
