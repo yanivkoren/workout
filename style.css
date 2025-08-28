@@ -136,18 +136,49 @@ body {
   color: var(--muted);
 }
 .modal-content {
-  background: #0d0d0f;
-  color: #e8eaf0;
+  background: var(--card);
+  color: var(--text);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 16px;
 }
+
 .modal-header {
   background: linear-gradient(135deg, rgba(79,140,255,.12), rgba(34,197,94,.10));
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
-.modal-header .btn-close { filter: invert(1); opacity:.95; }
+/* כפתור סגירה בפופאפ */
+.modal-header .btn-close {
+  filter: invert(1);   /* ברירת מחדל: לבן (למצב כהה) */
+  opacity: 0.9;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+/* במצב בהיר – כפתור כהה, לא הפוך */
+@media (prefers-color-scheme: light) {
+  .modal-header .btn-close {
+    filter: none;      /* מבטל את ההפיכה ללבן */
+    opacity: 0.6;      /* אפור כהה */
+  }
+  .modal-header .btn-close:hover {
+    opacity: 1;
+  }
+}
+
 .modal-header .btn-close:hover { opacity:1; }
 .exercise-img-wrap { border-radius: 12px; overflow: hidden; background:#000; }
+
+/* תמונת התרגיל במודאל – התאמה מלאה למסך, ללא חיתוך */
+.exercise-img {
+  width: 100%;
+  height: auto;
+  max-width: min(100%, 100vw);
+  max-height: min(62svh, 62vh); /* svh למובייל, vh לגיבוי */
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
 
 /* בקרות טיימר */
 .controls { position: relative; }
@@ -207,6 +238,13 @@ body {
   #modalInstructions { color:#222; }
 }
 
+/* עטיפת התמונה – ללא חיתוך לרוחב, גלילה אנכית קלה במובייל אם צריך */
+@media (max-width: 576px){
+  .exercise-img-wrap {
+    overflow: auto;      /* במקום hidden במובייל */
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 /* ===============================
    📝 כרטיסי אימון (Workout List)

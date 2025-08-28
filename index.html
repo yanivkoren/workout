@@ -1,532 +1,492 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <title>מאמן כושר אישי</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <style>
-    body { background: #f8fafb; }
-    .card-category { cursor:pointer; transition:0.2s; }
-    .card-category:hover { background:#e7f1ff; }
-    .card-ex { cursor:pointer; }
-    .d-none { display:none !important; }
-    .exercise-img { max-width:160px; max-height:120px; border-radius:18px; margin-bottom:16px;}
-    @media (max-width: 600px) {
-      .exercise-img { max-width:100%; height:auto;}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <title>יאללה לזוז</title>
+    <link rel="icon" 
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+<script src="workouts.js"></script>
+
 </head>
+
 <body>
-<div class="container py-4 position-relative">
 
-  <!-- דף ראשי: קטגוריות -->
-  <div id="main-screen">
-    <h2 class="text-center mb-4">בחר נושא אימון</h2>
-    <div class="row g-3 justify-content-center">
-      <!-- נבנה כרטיס לכל קטגוריה -->
-    </div>
+  
+
+
+    <div class="container my-3">
+        <div class="hero">
+  <div class="hero-head d-flex align-items-center justify-content-between">
+    <h2 class="m-0">יאללה לזוז 💪</h2>
+    <button class="btn btn-sm btn-ghost" id="muteBtn" aria-pressed="false" title="השתק צליל">🔊</button>
   </div>
-
-  <!-- דף רשימת תרגילים -->
-  <div id="list-screen" class="d-none">
-    <button class="btn btn-secondary mb-3 back-btn" onclick="showMain()">חזרה</button>
-    <h3 id="category-title" class="mb-4"></h3>
-    <ul class="list-group" id="ex-list"></ul>
-  </div>
-
-  <!-- דף תרגיל בודד -->
-  <div id="detail-screen" class="d-none">
-    <button class="btn btn-secondary mb-3 back-btn" onclick="showList()">חזרה</button>
-    <div class="text-center">
-      <img id="ex-img" class="exercise-img mb-3" src="" alt="" style="display:none;">
-    </div>
-    <h4 id="ex-name" class="mb-3"></h4>
-    <div id="ex-desc" class="mb-2 text-dark"></div>
-  </div>
-
 </div>
 
-<script>
-// נתוני קטגוריות ותרגילים (להרחבה קלה!)
-const categories = [
-  { key: "warmup", name: "חימום" },
-  { key: "upper", name: "כח פלג גוף עליון" },
-  { key: "lower", name: "כח פלג גוף תחתון" },
-  { key: "core", name: "כח שרירי ליבה" },
-  { key: "cardio", name: "סיבולת" },
-  { key: "flex", name: "גמישות" },
-  { key: "balance", name: "שיווי משקל / יציבה" },
-  { key: "relax", name: "הרפיה" },
-];
 
-// דוגמה לקטגוריה (להרחיב כרצונך)
+        <!-- Tabs לבחירת סוג אימון -->
+        <div id="workoutTabs" class="mb-3"></div>
 
-const exercises = {
-warmup: [
-    {
-      name: "Elliptical",
-      desc: `<b>איך מבצעים:</b> עולים על המכשיר, אוחזים בידיות, מדוושים בתנועה סיבובית, רגליים וידיים יחד (הליכה/ריצה).<br><b>דגשים:</b> גב ישר, בטן מוחזקת, לא לנעול ברכיים, לעבוד בקצב אחיד.<br><b>וריאציות:</b> עבודה לאחור (Reverse Elliptical), ללא ידיים (ידיים במותניים), אינטרוולים של מהירות/התנגדות.`
-    },
-    {
-      name: "Elbow and Wrist Circles",
-      desc: `<b>איך מבצעים:</b> בעמידה, כופפים קלות את המרפקים ומסובבים אותם במעגלים, 10 חזרות לכל כיוון. לאחר מכן, מסובבים את מפרקי כף היד לשני הכיוונים.<br><b>דגשים:</b> תנועה איטית, כתפיים רפויות, טווח תנועה קל.<br><b>וריאציות:</b> סיבובי מרפקים בידיים מושטות קדימה, להוסיף סיבוב אצבעות/כפות ידיים.`
-    },
-    {
-      name: "Arm Swings",
-      desc: `<b>איך מבצעים:</b> עמידה זקופה, פורסים ידיים לצדדים ואז מחבקים אותן מול החזה (פתיחה–סגירה), בקצב בינוני.<br><b>דגשים:</b> תנועה רכה, לא להכות חזק, כתפיים רפויות.<br><b>וריאציות:</b> פתיחת ידיים לגובה שונה, עם כפיפת ברכיים עדינה.`
-    },
-    {
-      name: "Shoulder and Arm Circles",
-      desc: `<b>איך מבצעים:</b> ידיים ישרות לצדדים, מסובבים בעיגול קדימה 10 פעמים, ואז אחורה. אפשר להקטין/להגדיל את העיגול.<br><b>דגשים:</b> כתפיים רפויות, לא למהר, לא להרים כתפיים.<br><b>וריאציות:</b> סיבובי זרועות גדולים/קטנים, מעגלים קדימה ואחורה לסירוגין.`
-    },
-    {
-      name: "Torso Rotations",
-      desc: `<b>איך מבצעים:</b> עמידה, ידיים בגובה כתפיים, מסובבים את הגו מצד לצד (האגן נשאר ישר), מביטים אחורה בעדינות.<br><b>דגשים:</b> להניע מהגב העליון, בטן מוחזקת, ללא קפיצות.<br><b>וריאציות:</b> תוספת תנועת יד אחורה (“bow and arrow”), ישיבה על כיסא/כדור.`
-    },
-    {
-      name: "Hip Circles and Hip Openers",
-      desc: `<b>איך מבצעים:</b> עמידה, ידיים על המותניים, מסובבים אגן במעגל רחב 5–10 חזרות לכל כיוון. Hip Opener – להרים ברך, לסובב החוצה/פנימה לסירוגין.<br><b>דגשים:</b> להרגיש תנועה נעימה, לא להגזים בטווח, לשמור על גב ישר.<br><b>וריאציות:</b> מעגלים עם אגן קטן/גדול, פתיחת ירך בעמידה על משטח לא יציב.`
-    },
-    {
-      name: "High Knees",
-      desc: `<b>איך מבצעים:</b> ריצה/צעידה במקום, הרמת ברכיים גבוה, ידיים עובדות (כמו בריצה).<br><b>דגשים:</b> גב ישר, בטן מוחזקת, נחיתה רכה.<br><b>וריאציות:</b> High Knees איטי (חימום), או אינטרוולים מהירים, High Knees לצדדים.`
-    },
-    {
-      name: "Leg Swings",
-      desc: `<b>איך מבצעים:</b> עמידה לצד קיר/תמיכה, מניפים רגל קדימה–אחורה, 10–15 חזרות, ואז מצד לצד.<br><b>דגשים:</b> תנועה רכה, לא בעיטה, גב ישר.<br><b>וריאציות:</b> Leg Swings עם תמיכה בשני קירות, על BOSU.`
-    },
-    {
-      name: "Marching in Place + Arm Movement",
-      desc: `<b>איך מבצעים:</b> צעידה במקום, להרים ברך בגובה אגן, להניף יד נגדית קדימה.<br><b>דגשים:</b> קצב אחיד, תנועה מתואמת, גב ישר.<br><b>וריאציות:</b> Marching איטי/מהיר, עם משקוליות יד.`
-    },
-    {
-      name: "Dynamic Side Lunges",
-      desc: `<b>איך מבצעים:</b> עמידה רחבה, מכרע לצד אחד, חזרה למרכז, צד שני.<br><b>דגשים:</b> ברך לא עוברת את אצבעות הרגל, גב ישר, להרגיש מתיחה בירך פנימית.<br><b>וריאציות:</b> עם קפיצה קלה, עם משקולת בחזה.`
-    },
-    {
-      name: "Single Leg Stand",
-      desc: `<b>איך מבצעים:</b> עמידה על רגל אחת, אפשר להניף ידיים, או לעצום עיניים.<br><b>דגשים:</b> בטן מוחזקת, ברך מעט כפופה, לנסות להחזיק 20–60 שניות.<br><b>וריאציות:</b> עם תנועה בידיים, עמידה על BOSU/כרית.`
-    }
-  ],
- lower: [
-    {
-      name: "Goblet Squat",
-      desc: `<b>איך מבצעים:</b> עמידה בפיסוק, משקולת מוחזקת בשתי ידיים קרוב לחזה. יורדים לסקוואט עד שהירך מקבילה לרצפה, עולים חזרה.<br><b>דגשים:</b> גב ניטרלי, עקבים על הרצפה, ברכיים החוצה, בטן מוחזקת.<br><b>וריאציות:</b> סקוואט עם משקל גוף בלבד, Front Squat (משקולת/מוט על הכתפיים מלפנים).`
-    },
-    {
-      name: "Leg Press",
-      desc: `<b>איך מבצעים:</b> ישיבה במכשיר, כפות רגליים ברוחב אגן, דחיפה של הפלטה עד רגליים כמעט ישרות, ירידה איטית.<br><b>דגשים:</b> גב מוצמד למשענת, לא לנעול ברכיים, טווח מלא אך בטוח.<br><b>וריאציות:</b> Leg Press רגל אחת, רגליים בפישוק/צמודות לשינוי דגש.`
-    },
-    {
-      name: "Lunges",
-      desc: `<b>איך מבצעים:</b> צעד גדול קדימה/אחורה, ירידה עד שהברך האחורית כמעט נוגעת ברצפה, עליה חזרה.<br><b>דגשים:</b> ברך קדמית לא עוברת את אצבעות הרגל, גוף זקוף, תנועה נשלטת.<br><b>וריאציות:</b> Walking Lunges (הליכה), Reverse Lunges, Side Lunges (מכרע לצדדים).`
-    },
-    {
-      name: "Hip Thrust",
-      desc: `<b>איך מבצעים:</b> גב על ספסל, רגליים כפופות, דחיפת אגן מעלה עד גו ישר, ירידה איטית.<br><b>דגשים:</b> עקבים ברצפה, ברכיים ב-90°, ליבה מוחזקת, לדחוף מהעקבים.<br><b>וריאציות:</b> חד-רגלי, עם משקולת/מוט על האגן.`
-    },
-    {
-      name: "Step Up",
-      desc: `<b>איך מבצעים:</b> עליה על ספסל/קופסה ברגל אחת, ירידה חזרה, לסירוגין.<br><b>דגשים:</b> עקבים על המדרגה, גוף זקוף, ברך לא מתמוטטת פנימה.<br><b>וריאציות:</b> עם משקולות יד, Side Step Up (עליה הצידה).`
-    },
-    {
-      name: "Leg Curl",
-      desc: `<b>איך מבצעים:</b> במכשיר, כיפוף ברכיים להביא עקבים לכיוון ישבן, חזרה איטית.<br><b>דגשים:</b> בטן מוחזקת, לא לקפוץ, לשמור על גב תחתון צמוד.<br><b>וריאציות:</b> בעמידה (Cable), Nordic Hamstring Curl (מתקדמים).`
-    },
-    {
-      name: "Calf Raise",
-      desc: `<b>איך מבצעים:</b> עמידה, עליה על קצות האצבעות, ירידה איטית.<br><b>דגשים:</b> עצירה קצרה למעלה, עקבים יחד, ברכיים רכות.<br><b>וריאציות:</b> על מדרגה, חד-רגלי.`
-    }
-  ],
- upper: [
-    {
-      name: "Chest Press",
-      desc: `<b>איך מבצעים:</b> שכיבה על ספסל/מכשיר, דחיקת מוט/משקולות מהחזה למעלה, ירידה עד קו חזה.<br><b>דגשים:</b> כתפיים לא עולות, מרפקים בזווית 75–90°, בטן מוחזקת, לא לנעול מרפקים.<br><b>וריאציות:</b> Dumbbell Chest Press, Incline/Decline Chest Press, Machine Chest Press.`
-    },
-    {
-      name: "One Arm Row / Seated Row Machine",
-      desc: `<b>איך מבצעים:</b> משיכת משקולת ביד אחת לצד המותן/בישיבה משיכה עם שתי ידיים.<br><b>דגשים:</b> גב ישר, שכמות אחורה, לא למשוך עם הצוואר.<br><b>וריאציות:</b> Bent Over Row (עם שתי ידיים), Standing Cable Row.`
-    },
-    {
-      name: "Push-Up / Knee Push-Up",
-      desc: `<b>איך מבצעים:</b> שכיבה על הבטן, דחיפה של כל הגוף מעלה מהידיים, חזרה איטית. מהברכיים – בולמים עם הברכיים.<br><b>דגשים:</b> גוף בקו אחד, בטן חזקה, מרפקים בזווית 45°.<br><b>וריאציות:</b> Incline/Decline Push-Up, Diamond Push-Up, Push-Up על BOSU/משטח רך.`
-    },
-    {
-      name: "Lateral Raise",
-      desc: `<b>איך מבצעים:</b> עמידה, ידיים אוחזות משקולות קטנות, הרחקה לצדדים עד גובה כתף, ירידה איטית.<br><b>דגשים:</b> מרפקים מעט כפופים, תנועה איטית, לא לנעול מרפקים.<br><b>וריאציות:</b> Lateral Raise בעמידה/ישיבה, עם גומיה.`
-    },
-    {
-      name: "Shoulder Press",
-      desc: `<b>איך מבצעים:</b> ישיבה/עמידה, דחיפת משקולות/מוט מעל הראש, ירידה איטית לגובה כתף.<br><b>דגשים:</b> גב ישר, לא להרים כתפיים, תנועה בטווח נוח.<br><b>וריאציות:</b> Dumbbell/Barbell Shoulder Press, Arnold Press.`
-    },
-    {
-      name: "Assisted Pull-Up",
-      desc: `<b>איך מבצעים:</b> משיכה כלפי מעלה לעבר מוט בעזרת מכונה/רצועה מסייעת, ירידה איטית.<br><b>דגשים:</b> שכמות אחורה, גב ישר, לא להניף גוף.<br><b>וריאציות:</b> Pull-Up רגיל, Chin-Up (אחיזה הפוכה).`
-    },
-    {
-      name: "Triceps Extension",
-      desc: `<b>איך מבצעים:</b> ישיבה/עמידה, פשיטת ידיים עם כבל/משקולת מאחורי הראש או בעמידה עם פולי.<br><b>דגשים:</b> מרפקים צמודים, תנועה מלאה, בטן חזקה.<br><b>וריאציות:</b> Overhead Extension, Triceps Kickback.`
-    },
-    {
-      name: "Biceps Curl",
-      desc: `<b>איך מבצעים:</b> עמידה, כיפוף מרפקים והרמת משקולת לכיוון הכתף, ירידה איטית.<br><b>דגשים:</b> מרפקים צמודים, לא להניע את הכתף, תנועה איטית.<br><b>וריאציות:</b> Hammer Curl, Concentration Curl.`
-    }
-  ],
-core: [
-  {
-    name: "Plank",
-    desc: `<b>איך מבצעים:</b> תומכים על אמות וכפות רגליים, גוף ישר, בטן אסופה, לשמור על קו אחיד מהקרסול עד הראש.<br>
-<b>דגשים:</b> לא לשקוע בגב התחתון, לייצב כתפיים, צוואר בקו הגוף, נשימה רציפה.<br>
-<b>וריאציות:</b> Plank על כפות ידיים, Plank צדדי, Plank על כדור פיזיו.`
-  },
-  {
-    name: "Crunch / Sit-Up",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, ברכיים כפופות, כפות רגליים על הרצפה. מרימים כתפיים לכיוון הברכיים, חזרה איטית.<br>
-<b>דגשים:</b> לא למשוך בצוואר, תנועה קצרה (Crunch), להרגיש את הבטן מתכווצת.<br>
-<b>וריאציות:</b> Sit-Up מלא, Crunch עם רגליים על ספסל, Bicycle Crunch.`
-  },
-  {
-    name: "Bicycle Crunch",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, ברכיים באוויר, מביאים מרפק לברך נגדית לסירוגין, תנועת דיווש.<br>
-<b>דגשים:</b> תנועה איטית ומבוקרת, לא למשוך בצוואר, נשימה סדירה.<br>
-<b>וריאציות:</b> עם רגליים קרובות יותר לקרקע, עם ידיים צמודות לחזה.`
-  },
-  {
-    name: "Dead Bug",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, ידיים ישרות למעלה, רגליים כפופות 90°. מורידים יד ורגל נגדית כמעט עד לרצפה, מחזירים וחוזר.<br>
-<b>דגשים:</b> בטן אסופה, גב תחתון צמוד לרצפה, תנועה איטית.<br>
-<b>וריאציות:</b> Dead Bug עם גומיה, עם רגליים ישרות.`
-  },
-  {
-    name: "Bird Dog",
-    desc: `<b>איך מבצעים:</b> בעמידת שש, מרימים יד ורגל נגדית ישר קדימה/אחורה, מחזירים ומחליפים צד.<br>
-<b>דגשים:</b> בטן חזקה, גב ישר, תנועה נשלטת, לא לקמר גב.<br>
-<b>וריאציות:</b> Bird Dog על BOSU, Bird Dog סטטי (להחזיק כמה שניות).`
-  },
-  {
-    name: "Side Plank",
-    desc: `<b>איך מבצעים:</b> שכיבה על הצד, אמה על הרצפה, הרמת אגן כך שכל הגוף בקו ישר.<br>
-<b>דגשים:</b> אגן עולה, לא לשקוע בכתף, בטן אסופה, ראש בהמשך לעמוד השדרה.<br>
-<b>וריאציות:</b> על כף היד, על ברך תחתונה (קל יותר), Side Plank דינמי (הורדת והרמת אגן).`
-  },
-  {
-    name: "Pallof Press",
-    desc: `<b>איך מבצעים:</b> אחיזה בכבל/גומיה צידית, דחיפה של הידיים ישר קדימה וחזרה, בלי לסובב את הגוף.<br>
-<b>דגשים:</b> גב זקוף, בטן חזקה, לא לתת לגוף להסתובב.<br>
-<b>וריאציות:</b> Pallof Press בכריעה, עם רגליים צמודות (יותר קשה).`
-  },
-  {
-    name: "Russian Twist",
-    desc: `<b>איך מבצעים:</b> ישיבה, רגליים באוויר/על הרצפה, סיבוב של הגו מצד לצד, אפשר להחזיק משקל.<br>
-<b>דגשים:</b> גב ישר, תנועה מהגו, לא רק מהידיים, נשיפה בכל סיבוב.<br>
-<b>וריאציות:</b> עם משקולת/כדור, רגליים באוויר (מתקדמים).`
-  },
-  {
-    name: "Hollow Hold",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, ידיים ורגליים באוויר, גב תחתון צמוד לרצפה, להחזיק.<br>
-<b>דגשים:</b> להתחיל עם ברכיים כפופות (קל), להאריך רגליים וידיים (קשה), גב תחתון צמוד.<br>
-<b>וריאציות:</b> Rocking Hollow Hold (נדנוד קדימה/אחורה), Hollow Hold קצר (סטים קצרים).`
-  },
-  {
-    name: "Mountain Climbers",
-    desc: `<b>איך מבצעים:</b> מתחילים בפלאנק גבוה, מכניסים ברכיים אל החזה לסירוגין במהירות.<br>
-<b>דגשים:</b> לא להרים ישבן, בטן אסופה, קצב קבוע, נשימה.<br>
-<b>וריאציות:</b> Slow Mountain Climbers (לאט, דגש על יציבות), על BOSU/משטח לא יציב.`
-  },
-  {
-    name: "Roll Out",
-    desc: `<b>איך מבצעים:</b> ברכיים על הרצפה, אוחזים בגלגל/כדור, גולשים קדימה עד למתיחה וחוזרים.<br>
-<b>דגשים:</b> בטן חזקה, גב ישר, לא לקמר את הגב, טווח תנועה מבוקר.<br>
-<b>וריאציות:</b> Roll Out עם ברים/מקל, עם כדור פיזיו.`
-  }
-],
+        <!-- רשת האימונים (ברירת מחדל מוצג) -->
+        <div id="workoutsGrid" class="row g-3 g-md-4"></div>
 
-flex: [
-  {
-    name: "Hamstring Stretch",
-    desc: `<b>איך מבצעים:</b> ישיבה/עמידה, רגליים ישרות, התכופפות קדימה עד שמרגישים מתיחה בירך האחורית.<br>
-<b>דגשים:</b> גב ישר, מתיחה עד למתח נעים, לא להתקפל חזק מדי.<br>
-<b>וריאציות:</b> ישיבה עם רגל אחת כפופה, מתיחה עם רצועה או מגבת.`
-  },
-  {
-    name: "Quad Stretch",
-    desc: `<b>איך מבצעים:</b> עמידה, כיפוף ברך לאחור, החזקת הקרסול ביד, ברכיים צמודות.<br>
-<b>דגשים:</b> ליישר ירך לאחור, לשמור על שיווי משקל, גב זקוף.<br>
-<b>וריאציות:</b> בשכיבה על הצד, עם תמיכה בכיסא.`
-  },
-  {
-    name: "Standing Calf Stretch",
-    desc: `<b>איך מבצעים:</b> עמידה מול קיר, רגל אחת קדימה כפופה, רגל שנייה ישרה לאחור, דוחפים עקב אחורי לרצפה.<br>
-<b>דגשים:</b> עקב אחורי נוגע ברצפה, לא להרים אצבעות, גב ישר.<br>
-<b>וריאציות:</b> ישיבה עם רגל ישרה ודחיפת כרית כף רגל עם מגבת.`
-  },
-  {
-    name: "Butterfly Stretch",
-    desc: `<b>איך מבצעים:</b> ישיבה, כפות רגליים יחד, ברכיים לצדדים, מחזיקים רגליים ומתכופפים קדימה.<br>
-<b>דגשים:</b> גב ישר, לא ללחוץ חזק, להרגיש מתיחה בירך פנימית.<br>
-<b>וריאציות:</b> להזיז בעדינות את הברכיים כלפי מעלה ומטה.`
-  },
-  {
-    name: "Doorway Chest Stretch",
-    desc: `<b>איך מבצעים:</b> עמידה בפתח דלת, מרפקים בזווית 90°, כפות ידיים על המשקוף, נוטים קלות קדימה.<br>
-<b>דגשים:</b> כתפיים למטה, לא להרחיק מרפקים מהגוף, לחוש מתיחה בחזה.<br>
-<b>וריאציות:</b> מרפקים בגבהים שונים, יד ישרה על המשקוף.`
-  },
-  {
-    name: "Cross-Body Shoulder Stretch",
-    desc: `<b>איך מבצעים:</b> עומדים או יושבים, יד אחת ישרה מעבר לחזה, מושכים בעדינות עם היד השנייה.<br>
-<b>דגשים:</b> כתף רפויה, לא למשוך חזק, להרגיש מתיחה בכתף האחורית.<br>
-<b>וריאציות:</b> מתיחה בעמידה, מתיחה בשכיבה.`
-  },
-  {
-    name: "Side Stretch / Arm Stretch",
-    desc: `<b>איך מבצעים:</b> עמידה, יד אחת מורמת, מתכופפים לצד הנגדי, מרגישים מתיחה בצד הגוף.<br>
-<b>דגשים:</b> ירכיים נשארות במקום, לא להתקפל קדימה, כתף לא עולָה.<br>
-<b>וריאציות:</b> בישיבה, עם שתי ידיים מעל הראש.`
-  },
-  {
-    name: "Supine Spinal Twist",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, רגל כפופה עוברת לצד הנגדי של הגוף, ידיים פרושות לצדדים.<br>
-<b>דגשים:</b> כתפיים צמודות לרצפה, מבט לצד הנגדי לרגל.<br>
-<b>וריאציות:</b> עם שתי רגליים יחד, מתיחה דינמית (להחליף צדדים כל 10 שניות).`
-  },
-  {
-    name: "Knees to Chest Stretch",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, מחבקים ברכיים לכיוון החזה, שומרים את הראש והרגליים על הרצפה.<br>
-<b>דגשים:</b> לא לגלגל את הגב, להישאר רגוע, נשימות עמוקות.<br>
-<b>וריאציות:</b> כל ברך בנפרד, סיבוב קל מצד לצד.`
-  },
-  {
-    name: "Cat-Cow",
-    desc: `<b>איך מבצעים:</b> עמידת שש, בגב עגול (Cat) מכניסים ראש פנימה, בגב קעור (Cow) מרימים ראש וישבן, מחליפים בתנועה זורמת.<br>
-<b>דגשים:</b> תנועה איטית, לשים לב לגב התחתון, לא להפעיל לחץ חזק.<br>
-<b>וריאציות:</b> בתוספת תנועות אגן לצדדים, Cat-Cow ישיבה.`
-  },
-  {
-    name: "Neck Stretch",
-    desc: `<b>איך מבצעים:</b> ישיבה/עמידה, מניחים יד אחת על הראש, מותחים באדינות לצד.<br>
-<b>דגשים:</b> כתפיים רפויות, לא ללחוץ חזק, לשמור על נשימה רגועה.<br>
-<b>וריאציות:</b> הטיית ראש קדימה/לאחור, מתיחה עם יד נגדית מושכת מטה.`
-  },
-  {
-    name: "Glute Stretch",
-    desc: `<b>איך מבצעים:</b> ישיבה או שכיבה, רגל אחת כפופה מעל ברך השנייה, מחבקים את הרגל התחתונה לכיוון החזה.<br>
-<b>דגשים:</b> גב ישר, לא למשוך בכוח, להרגיש מתיחה בישבן/ירך חיצונית.<br>
-<b>וריאציות:</b> בישיבה על כיסא, עם שתי רגליים יחד.`
-  },
-  {
-    name: "Pigeon Pose",
-    desc: `<b>איך מבצעים:</b> עמידת שש, כופפים רגל אחת לפנים (כף רגל לעבר שורש כף היד הנגדית), רגל שניה נשלחת לאחור, גו נשאר ישר.<br>
-<b>דגשים:</b> לא להעמיס על הברך, לשמור על אגן ישר, לשהות 20–60 שניות.<br>
-<b>וריאציות:</b> Reclined Pigeon (בשכיבה), Forward Fold בתנוחה.`
-  }
-],
+        <!-- תצוגת האימון הנבחר (בהתחלה מוסתר) -->
+        <div id="workoutDetail" class="d-none"></div>
 
-balance: [
-  {
-    name: "Single Leg Stand (Eyes Open/Closed)",
-    desc: `<b>איך מבצעים:</b> עומדים על רגל אחת, ידיים לצדדים/על המותניים, מנסים לשמור על שיווי משקל. ניתן לנסות גם עם עיניים עצומות.<br>
-<b>דגשים:</b> להחזיק בטן חזקה, ברך מעט כפופה, להתרכז בנקודה קבועה. להחליף רגליים.<br>
-<b>וריאציות:</b> עמידה על כרית/משטח רך, הוספת תנועות ידיים, עצימת עיניים.`
-  },
-  {
-    name: "Bird Dog",
-    desc: `<b>איך מבצעים:</b> עמידת שש, מרימים יד ורגל נגדית ישר קדימה/אחורה, חוזרים ומחליפים צד.<br>
-<b>דגשים:</b> גב ישר, בטן חזקה, לא לקמר גב, תנועה איטית.<br>
-<b>וריאציות:</b> Bird Dog סטטי (להחזיק כמה שניות), Bird Dog על BOSU/כדור.`
-  },
-  {
-    name: "Unstable Surface Side Plank",
-    desc: `<b>איך מבצעים:</b> פלאנק צדדי על כרית/משטח רך/כדור BOSU. מרימים אגן כך שהגוף בקו ישר.<br>
-<b>דגשים:</b> לא לשקוע בכתף, לשמור על בטן חזקה, לא לקרוס עם האגן.<br>
-<b>וריאציות:</b> עם רגל מורמת, פלאנק צד רגיל על משטח קשיח.`
-  },
-  {
-    name: "Unstable Surface Plank",
-    desc: `<b>איך מבצעים:</b> פלאנק רגיל על BOSU, כדור פיזיו או כרית רכה.<br>
-<b>דגשים:</b> גוף בקו ישר, בטן אסופה, יציבות, לשים לב שאין כאב בגב.<br>
-<b>וריאציות:</b> פלאנק דינמי (העברת משקל מצד לצד), פלאנק רגיל על רצפה.`
-  },
-  {
-    name: "Heel to Toe Walk",
-    desc: `<b>איך מבצעים:</b> הולכים בקו ישר, העקב של רגל קדמית נוגע באצבעות הרגל האחורית בכל צעד.<br>
-<b>דגשים:</b> מבט לפנים, תנועה איטית, אפשר לעזור עם ידיים לצדדים.<br>
-<b>וריאציות:</b> ללכת לאחור, ללכת עם עיניים עצומות (בזהירות).`
-  },
-  {
-    name: "Slow Step Up",
-    desc: `<b>איך מבצעים:</b> עולים לאט על ספסל/מדרגה ברגל אחת, יורדים באיטיות, מחליפים רגל.<br>
-<b>דגשים:</b> לשמור על יציבות, ברך לא מתמוטטת פנימה, תנועה איטית.<br>
-<b>וריאציות:</b> Step Up על BOSU, הוספת הרמת ברך בסיום העלייה.`
-  },
-  {
-    name: "BOSU Squat",
-    desc: `<b>איך מבצעים:</b> עומדים במרכז הבוסו (צד כחול למעלה), מבצעים סקווט רגיל.<br>
-<b>דגשים:</b> מבט קדימה, לא למהר, לשמור על שיווי משקל.<br>
-<b>וריאציות:</b> BOSU Squat על צד הפוך (למתקדמים), עם משקולות יד.`
-  },
-  {
-    name: "BOSU Single Leg Stand",
-    desc: `<b>איך מבצעים:</b> עומדים על רגל אחת במרכז הבוסו, ידיים לצדדים, שומרים יציבות.<br>
-<b>דגשים:</b> ברך רכה, בטן מוחזקת, להביט קדימה.<br>
-<b>וריאציות:</b> לסגור עיניים, להניף ידיים, להחזיק זמן ארוך.`
-  },
-  {
-    name: "BOSU Lunge",
-    desc: `<b>איך מבצעים:</b> מכרע (Lunge) עם רגל קדמית על הבוסו, יורדים לאט ועולים.<br>
-<b>דגשים:</b> להחזיק בטן חזקה, תנועה איטית, לא לנעול ברך.<br>
-<b>וריאציות:</b> עם רגל אחורית על הבוסו, BOSU Lunge דינמי (החלפת רגליים).`
-  },
-  {
-    name: "BOSU Push-Up Hold",
-    desc: `<b>איך מבצעים:</b> מניחים ידיים על בוסו (צד כחול כלפי מעלה), יורדים לפוש-אפ ומחזיקים למטה כמה שניות.<br>
-<b>דגשים:</b> גוף ישר, בטן אסופה, לא לשקוע בכתפיים.<br>
-<b>וריאציות:</b> פוש-אפ רגיל על BOSU, BOSU Push-Up דינמי (עליות וירידות).`
-  },
-  {
-    name: "BOSU Mountain Climber",
-    desc: `<b>איך מבצעים:</b> ידיים על בוסו, תרגיל Mountain Climber (הכנסת ברכיים אל החזה), קצב איטי/בינוני.<br>
-<b>דגשים:</b> גב ישר, בטן אסופה, יציבות.<br>
-<b>וריאציות:</b> Mountain Climbers רגיל, BOSU Mountain Climber מהיר (אינטרוולים).`
-  },
-  {
-    name: "BOSU Side-to-Side Hop",
-    desc: `<b>איך מבצעים:</b> קפיצה מצד לצד מעל הבוסו, נגיעה קלה בכל צד.<br>
-<b>דגשים:</b> נחיתה רכה, להפעיל ליבה, מבט קדימה.<br>
-<b>וריאציות:</b> קפיצות עם רגל אחת, קפיצות איטיות.`
-  },
-  {
-    name: "BOSU Deadlift",
-    desc: `<b>איך מבצעים:</b> עומדים על בוסו, משקולות בידיים, מבצעים דדליפט (כיפוף מותניים והורדת משקולות), עלייה חזרה.<br>
-<b>דגשים:</b> גב ישר, תנועה איטית, לא לקמר גב.<br>
-<b>וריאציות:</b> דדליפט חד רגלי על בוסו, דדליפט עם גומיה.`
-  },
-  {
-    name: "BOSU Bird Dog",
-    desc: `<b>איך מבצעים:</b> עמידת שש על בוסו, מרימים יד ורגל נגדית, שומרים על שיווי משקל.<br>
-<b>דגשים:</b> לא לקמר גב, תנועה איטית, מבט לרצפה.<br>
-<b>וריאציות:</b> Bird Dog רגיל, Bird Dog עם עצימת עיניים.`
-  },
-  {
-    name: "Physio Ball Wall Squat",
-    desc: `<b>איך מבצעים:</b> עומדים עם כדור פיזיו בין הגב לקיר, רגליים קדימה, מבצעים סקווט כשהכדור גולש לאורך הגב.<br>
-<b>דגשים:</b> גב צמוד לכדור, ברכיים לא עוברות אצבעות רגליים, תנועה חלקה.<br>
-<b>וריאציות:</b> עם משקולות יד, Squat חד רגלי.`
-  },
-  {
-    name: "Physio Ball Hip Bridge",
-    desc: `<b>איך מבצעים:</b> שכיבה על הגב, עקבים על הכדור, מרימים אגן עד לקו ישר, חוזרים לאט.<br>
-<b>דגשים:</b> בטן חזקה, לא לקרוס עם האגן, נשימה.<br>
-<b>וריאציות:</b> Hip Bridge רגיל, עם רגל אחת, עם החלקה קדימה/אחורה על הכדור.`
-  },
-  {
-    name: "Physio Ball Plank",
-    desc: `<b>איך מבצעים:</b> מניחים אמות על הכדור, רגליים ישרות, מחזיקים פלאנק.<br>
-<b>דגשים:</b> גוף ישר, בטן מוחזקת, לא לתת לכדור להתגלגל.<br>
-<b>וריאציות:</b> Plank עם כפות ידיים על הכדור, Plank עם תנועות קטנות מצד לצד.`
-  }
-],
-
-
-relax: [
-  {
-    name: "Child’s Pose",
-    desc: `<b>איך מבצעים:</b> ברכיים על הרצפה, ישבן לעקבים, ידיים קדימה, מצח נוגע במזרן.<br>
-<b>דגשים:</b> לנשום עמוק, לשחרר את הכתפיים, להחזיק 30–60 שניות.<br>
-<b>וריאציות:</b> ידיים לצדי הגוף, פישוק ברכיים רחב (Extended Child’s Pose).`
-  },
-  {
-    name: "Deep Breathing",
-    desc: `<b>איך מבצעים:</b> ישיבה/שכיבה, שאיפה עמוקה דרך האף, מילוי בטן, נשיפה איטית מהפה.<br>
-<b>דגשים:</b> נשימה איטית ועמוקה, ריכוז בתחושת הגוף, להרגיע מחשבות.<br>
-<b>וריאציות:</b> Box Breathing (4 שניות שאיפה, 4 שניות החזקה, 4 שניות נשיפה, 4 שניות החזקה), נשימות סרעפת.`
-  },
-  {
-    name: "Progressive Muscle Relaxation",
-    desc: `<b>איך מבצעים:</b> בשכיבה, מכווצים קבוצות שרירים בגוף (מהבהונות עד הפנים) למשך 5 שניות ואז משחררים.<br>
-<b>דגשים:</b> לשים לב להבדל בין מתח להרפיה, לעבוד מהקצוות למרכז.<br>
-<b>וריאציות:</b> אפשר לעשות רק לאזורי גוף מסוימים (ידיים/רגליים/פנים).`
-  },
-  {
-    name: "Legs Up the Wall Pose / Viparita Karani",
-    desc: `<b>איך מבצעים:</b> שוכבים על הגב, רגליים מורמות ומונחות על הקיר, ידיים לצדי הגוף.<br>
-<b>דגשים:</b> ישבן קרוב ככל האפשר לקיר, לנשום עמוק, להרפות כתפיים.<br>
-<b>וריאציות:</b> רגליים רחבות/צמודות, כרית תחת האגן.`
-  },
-  {
-    name: "Shoulder Rolls and Relaxation",
-    desc: `<b>איך מבצעים:</b> ישיבה/עמידה, מסובבים כתפיים לאחור/קדימה 10–15 פעמים, מרפים.<br>
-<b>דגשים:</b> לא להרים כתפיים חזק מדי, נשימות עמוקות תוך כדי.<br>
-<b>וריאציות:</b> סיבובי כתפיים בשילוב עם מתיחת צוואר או הרפיית ראש.`
-  }
-]
-};
-
-
-// יצירת כרטיסי קטגוריות
-const catRow = document.querySelector("#main-screen .row");
-categories.forEach(cat => {
-  const div = document.createElement("div");
-  div.className = "col-6 col-md-3";
-  div.innerHTML = `
-    <div class="card card-category text-center p-3 shadow-sm" onclick="showList('${cat.key}')">
-      <span style="font-size:1.7rem;">${cat.name}</span>
     </div>
+
+
+    <div class="modal fade" id="exerciseModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-heading">
+                        <div class="mh-emoji" id="modalEmoji">💪</div>
+                        <div>
+                            <h5 class="modal-title" id="modalTitle">הדגמת תרגיל</h5>
+                            <div class="modal-subchips">
+                                <span class="badge-chip" id="modalMuscle">—</span>
+                                <span class="badge-chip" id="modalTimeChip">—</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="סגור"
+                        onclick="onModalClose()"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="exercise-img-wrap mb-3">
+                        <img id="modalImage" class="exercise-img" src="" alt="תמונה של התרגיל">
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-12">
+                            <div class="info-card p-3">
+                                <h6>הוראות ביצוע</h6>
+                                <div id="modalInstructions">—</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!------->
+
+                    <div id="controlsWrapper" class="controls collapsed mt-3">
+                        <!-- ידית תחתונה ממורכזת: מציגה "הצג טיימר ▲" כשהטיימר סגור,
+       ו"‏הסתר ▼" כשהטיימר פתוח -->
+                        <div class="controls-handle">
+                            <button id="controlsShowBtn" class="handle-btn" type="button" onclick="expandControls()"
+                                aria-expanded="false" aria-controls="timerControls">הצג טיימר ▲</button>
+
+                            <button id="controlsHideBtn" class="handle-btn" type="button" onclick="collapseControls()"
+                                aria-expanded="true" aria-controls="timerControls">הסתר ▼</button>
+                        </div>
+
+                        <!-- בקרות הטיימר -->
+                        <div id="timerControls" class="controls-bar">
+                            <div class="container-fluid">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-12 col-lg-3">
+                                        <div id="timerDisplay" class="timer-display">0</div>
+                                        <div class="text-center mt-1">
+                                            <span class="badge text-bg-info me-1" id="suggestSeconds">משך מוצע: —</span>
+                                            <span class="badge text-bg-secondary" id="suggestRounds">סטים: 1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(15)">15 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(30)">30 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(60)">60 שנ׳</button>
+  <button class="btn btn-ghost btn-wide" onclick="startTimer(120)">120 שנ׳</button>
+  <button id="startSuggestedBtn" class="btn btn-success btn-wide d-none"
+    onclick="startSuggested()">לפי התרגיל</button>
+</div>
+
+                                    </div>
+                                    <div class="col-12 col-lg-3">
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                            <button class="btn btn-warning btn-wide" id="pauseBtn"
+                                                onclick="togglePause()">PAUSE</button>
+                                            <button class="btn btn-danger btn-wide"
+                                                onclick="resetTimer()">RESET</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="beep" preload="auto">
+        <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ===== נתונים =====
+        const CATEGORIES = [
+            "חימום כללי", "אירובי", "חימום ייעודי", "אימון כח", "אימון שיווי משקל", "אימון ליבה", "מתיחות"
+        ];
+        // תמונת ברירת מחדל 1x1 שקופה (מונעת 404 אם לא סופקה תמונה לתרגיל)
+        const DEFAULT_IMAGE = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+
+   
+
+
+        // אייקון/אימוג'י לכל קטגוריה
+        const CAT_ICON = {
+            "חימום כללי": "🔥",
+            "אירובי": "🏃‍♂️",
+            "חימום ייעודי": "🎯",
+            "אימון כח": "🏋️‍♀️",
+            "אימון שיווי משקל": "🧘‍♂️",
+            "אימון ליבה": "🫀",
+            "מתיחות": "🧶"
+        };
+
+        let selectedType = 'gym';           // 'gym' או 'home'
+let selectedWorkoutId = null;       // id של אימון פתוח כרגע (או null)
+
+
+
+// עוזר לריבוי/יחיד
+function formatCount(n) {
+  return n === 1 ? 'אימון 1' : `${n} אימונים`;
+}
+
+// משרטט את הטאבים העליונים ומחבר קליקים
+function renderWorkoutTabs(active = 'gym') {
+  selectedType = active;  // ← חשוב: לעדכן את הבחירה הגלובלית
+  const tabs = document.getElementById('workoutTabs');
+  if (!tabs) return;
+
+  const gymCount  = Array.isArray(WORKOUTS?.gym)  ? WORKOUTS.gym.length  : 0;
+  const homeCount = Array.isArray(WORKOUTS?.home) ? WORKOUTS.home.length : 0;
+
+  tabs.innerHTML = `
+    <ul class="nav nav-pills justify-content-center gap-2 flex-wrap">
+      <li class="nav-item">
+        <button id="tab-gym" type="button"
+          class="nav-link ${selectedType === 'gym' ? 'active' : ''}">
+          💪 חדר כושר
+          <span class="badge rounded-pill bg-secondary ms-1">${formatCount(gymCount)}</span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="tab-home" type="button"
+          class="nav-link ${selectedType === 'home' ? 'active' : ''}">
+          🏠 בית
+          <span class="badge rounded-pill bg-secondary ms-1">${formatCount(homeCount)}</span>
+        </button>
+      </li>
+    </ul>
   `;
-  catRow.appendChild(div);
-});
 
-let currentCategory = "";
-let lastScroll = 0;
-
-window.showList = function (catKey) {
-  if (!catKey) catKey = currentCategory;
-  currentCategory = catKey;
-  document.getElementById("main-screen").classList.add("d-none");
-  document.getElementById("detail-screen").classList.add("d-none");
-  document.getElementById("list-screen").classList.remove("d-none");
-  document.getElementById("category-title").innerText = categories.find(c => c.key === catKey).name;
-  const exList = document.getElementById("ex-list");
-  exList.innerHTML = "";
-  (exercises[catKey] || []).forEach((ex, i) => {
-    const li = document.createElement("li");
-    li.className = "list-group-item list-group-item-action card-ex";
-    li.innerText = ex.name;
-    li.onclick = () => showDetail(i);
-    exList.appendChild(li);
+  // מאזינים
+  document.getElementById('tab-gym')?.addEventListener('click', () => {
+    renderWorkoutTabs('gym');   // יעדכן selectedType
+    renderWorkoutList();        // יבנה לפי selectedType
+    showListHideDetail();
   });
-  lastScroll = window.scrollY;
-  window.scrollTo(0,0);
-};
-
-window.showDetail = function (exIndex) {
-  document.getElementById("list-screen").classList.add("d-none");
-  document.getElementById("detail-screen").classList.remove("d-none");
-  const ex = exercises[currentCategory][exIndex];
-  document.getElementById("ex-name").innerText = ex.name;
-  document.getElementById("ex-desc").innerHTML = ex.desc;
-
-  // בניית שם קובץ תמונה: שם התרגיל באנגלית, להחליף רווחים וקווים מיוחדים
-  let imgFile = ex.name.replace(/[^A-Za-z0-9]/g, "_") + ".jpg";
-  let imgPath = "img/" + imgFile;
-
-  const img = document.getElementById("ex-img");
-  // ננסה לטעון את התמונה (אם קיימת)
-  img.onerror = function() { this.style.display = "none"; };
-  img.onload = function() { this.style.display = ""; };
-  img.src = imgPath;
-};
+  document.getElementById('tab-home')?.addEventListener('click', () => {
+    renderWorkoutTabs('home');  // יעדכן selectedType
+    renderWorkoutList();        // יבנה לפי selectedType
+    showListHideDetail();
+  });
+}
 
 
-window.showMain = function () {
-  document.getElementById("list-screen").classList.add("d-none");
-  document.getElementById("detail-screen").classList.add("d-none");
-  document.getElementById("main-screen").classList.remove("d-none");
-  window.scrollTo(0, lastScroll);
-};
-</script>
+function selectType(type){
+  if (type===selectedType) return;
+  selectedType = type;
+  selectedWorkoutId = null;
+  renderWorkoutTabs();
+  renderWorkoutList();
+  showListHideDetail();
+}
+function renderWorkoutList() {
+  const root = document.getElementById('workoutsGrid');
+  if (!root) return;
 
+  // בחר את המערך לפי הטאב הפעיל (selectedType)
+  const arr = Array.isArray(WORKOUTS?.[selectedType]) ? WORKOUTS[selectedType] : [];
+
+  // נקה תוכן קודם
+  root.innerHTML = '';
+
+  // אין אימונים? הצג הודעה עדינה
+  if (arr.length === 0) {
+    root.innerHTML = `
+      <div class="col-12">
+        <div class="text-center text-muted py-4">אין אימונים להצגה כרגע.</div>
+      </div>`;
+    return;
+  }
+
+  // בנה כרטיס לכל אימון
+  arr.forEach(w => {
+    const col = document.createElement('div');
+    col.className = 'col-12 col-md-6 col-lg-4';
+
+    col.innerHTML = `
+      <div class="workout-card">
+        <div class="w-emoji">${w.emoji || '💪'}</div>
+        <div class="flex-grow-1">
+          <div class="w-title">${w.title || 'אימון ללא שם'}</div>
+          <div class="w-meta">
+            ${w.minutes ? `${w.minutes} דק׳ · ` : ''}${Object.keys(w.plan || {}).length} קטגוריות
+          </div>
+        </div>
+        <button class="btn btn-sm btn-ghost start-workout" type="button" data-id="${w.id}">התחל</button>
+      </div>
+    `;
+
+    // חיבור מאזין לחצן "התחל" (נמנע מ-inline JS)
+    col.querySelector('.start-workout')?.addEventListener('click', (e) => {
+      const id = e.currentTarget.getAttribute('data-id');
+      if (id) openWorkout(id);
+    });
+
+    root.appendChild(col);
+  });
+}
+
+function openWorkout(id){
+  const group = WORKOUTS[selectedType] || [];
+  const workout = group.find(w => w.id === id);
+  if (!workout) return;
+  selectedWorkoutId = id;
+
+  // Header + גוף
+  const detail = document.getElementById('workoutDetail');
+  detail.innerHTML = `
+    <div class="workout-head">
+      <button class="back-btn" type="button" onclick="backToList()">← חזרה</button>
+      <h3 class="mb-0">${workout.emoji || '💪'} ${workout.title}</h3>
+      <span class="ms-2 text-secondary">${workout.minutes? `${workout.minutes} דק׳` : ''}</span>
+    </div>
+    <div id="wd-body" class="row g-3 g-md-4"></div>
+  `;
+
+  // מציירים את גריד הקטגוריות לתוך wd-body מתוך plan של האימון
+  buildPlanGrid(workout.plan, 'wd-body');
+
+  showDetailHideList();
+}
+function backToList(){
+  selectedWorkoutId = null;
+  showListHideDetail();
+}
+function showDetailHideList(){
+  document.getElementById('workoutsGrid').classList.add('d-none');
+  document.getElementById('workoutDetail').classList.remove('d-none');
+  document.getElementById('workoutTabs')?.classList.add('d-none');
+}
+function showListHideDetail(){
+  document.getElementById('workoutDetail').classList.add('d-none');
+  document.getElementById('workoutsGrid').classList.remove('d-none');
+  document.getElementById('workoutTabs')?.classList.remove('d-none');
+
+}
+
+
+        function emojiForCategory(cat) {
+            return (typeof CAT_ICON !== 'undefined' && CAT_ICON[cat]) ? CAT_ICON[cat] : '💪';
+        }
+
+
+      function buildPlanGrid(plan, mountId){
+  const grid = document.getElementById(mountId);
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  // סדר לפי CATEGORIES, מציג רק קטגוריות שמופיעות ב-plan
+  CATEGORIES.forEach(cat => {
+    const list = (plan && plan[cat]) ? plan[cat] : null;
+    if (!list || !list.length) return;
+
+    const cardCol = document.createElement('div');
+    cardCol.className = 'col-12 col-md-6 col-lg-4';
+    cardCol.innerHTML = `
+      <div class="cat-card h-100" data-cat="${cat}">
+        <div class="cat-header">
+          <div class="cat-emoji">${CAT_ICON[cat] || "🏷️"}</div>
+          <div class="cat-title">${cat}</div>
+          <div class="cat-meta">${list.length} תרגילים</div>
+        </div>
+        <div class="cat-body" id="cat-body-${slug(cat)}"></div>
+        <div class="cat-footer">
+          <button class="btn-link-muted" type="button" onclick="toggleAll('${slug(cat)}')">כל התרגילים</button>
+        </div>
+      </div>`;
+    grid.appendChild(cardCol);
+
+    const body = cardCol.querySelector(`#cat-body-${slug(cat)}`);
+    list.forEach((ex, i) => {
+      const row = document.createElement('button');
+      row.className = 'ex-mini w-100 text-start btn btn-link';
+      row.type = 'button';
+      if (i > 2) { row.dataset.hidden = '1'; row.style.display = 'none'; }
+      row.innerHTML = `
+        <img class="ex-thumb" loading="lazy" alt="" src="${ex.image || ''}">
+        <div class="flex-grow-1">
+          <div class="ex-name">${ex.name}</div>
+          <div class="ex-sub">${ex.muscle} · ${ex.timeReps || ''}</div>
+        </div>`;
+      row.addEventListener('click', () => openExercise(ex, cat));
+      body.appendChild(row);
+    });
+  });
+}
+
+
+        function slug(s) { return (s || '').replace(/\s+/g, '-').replace(/[^\u0590-\u05FF\w-]/g, ''); }
+
+        // פותח/סוגר “כל התרגילים” בתוך כרטיס
+        function toggleAll(slugId) {
+            const body = document.getElementById(`cat-body-${slugId}`);
+            if (!body) return;
+            const hidden = [...body.querySelectorAll('[data-hidden="1"]')];
+            const isClosed = hidden.some(el => el.style.display === 'none');
+            hidden.forEach(el => el.style.display = isClosed ? '' : 'none');
+        }
+
+        // בנה במקום האקורדיון הישן
+        renderWorkoutTabs();
+renderWorkoutList();
+showListHideDetail();
+
+
+        // ===== Modal + timer logic =====
+        const exerciseModal = new bootstrap.Modal(document.getElementById('exerciseModal'));
+        let suggestedSeconds = null, suggestedRounds = 1;
+        let countdown = null, timeLeft = 0, isPaused = false, isRunning = false, remainingRounds = 1;
+        let muted = false;
+
+        document.getElementById('muteBtn').addEventListener('click', () => {
+            muted = !muted;
+            const btn = document.getElementById('muteBtn');
+            btn.textContent = muted ? '🔇' : '🔊';
+            btn.setAttribute('aria-pressed', String(muted));
+        });
+
+        function openExercise(ex, category) {
+            // תמונה
+            document.getElementById('modalImage').src = ex.image || DEFAULT_IMAGE;
+
+            // כותרת + תתי־שבבים
+            document.getElementById('modalTitle').innerHTML  = `${ex.name}`;
+            document.getElementById('modalMuscle').textContent = ex.muscle || '—';
+            document.getElementById('modalTimeChip').textContent = ex.timeReps || '—';
+            document.getElementById('modalEmoji').textContent = emojiForCategory(category);
+
+
+            // הוראות ביצוע
+            document.getElementById('modalInstructions').textContent = ex.instructions || '—';
+
+            // טיימר (כמו שהיה)
+            resetTimer();
+            const { seconds, rounds } = parseTimeReps(ex.timeReps);
+            suggestedSeconds = seconds; suggestedRounds = rounds;
+            document.getElementById('timerDisplay').textContent = seconds || 0;
+            document.getElementById('suggestSeconds').textContent = seconds ? `משך מוצע: ${seconds} שניות` : 'משך מוצע: —';
+            document.getElementById('suggestRounds').textContent = `סטים: ${rounds}`;
+            document.getElementById('startSuggestedBtn').classList.toggle('d-none', !seconds);
+
+            collapseControls();   // להשאיר: ברירת מחדל – הטיימר סגור
+            exerciseModal.show();
+        }
+
+
+        function parseTimeReps(str) {
+            if (!str) return { seconds: 0, rounds: 1 };
+            const minMatch = str.match(/(\d+)\s*(?:דק(?:ה|ות)?)/);
+            const secMatch = str.match(/(\d+)\s*(?:שנ(?:י(?:ה|ות)?)?|ש׳)/);
+            const multMatch = str.match(/[×xX]\s*(\d+)/);
+            const minutes = minMatch ? parseInt(minMatch[1], 10) : 0;
+            const secondsOnly = secMatch ? parseInt(secMatch[1], 10) : 0;
+            const seconds = minutes * 60 + secondsOnly;
+            const rounds = multMatch ? parseInt(multMatch[1], 10) : 1;
+            return { seconds, rounds };
+        }
+
+        function startTimer(seconds, rounds = 1) {
+            resetTimer();
+            remainingRounds = Math.max(1, rounds);
+            timeLeft = seconds; isPaused = false; isRunning = true;
+            document.getElementById('pauseBtn').textContent = 'PAUSE';
+            updateDisplay(timeLeft);
+            countdown = setInterval(tick, 1000);
+        }
+        function startSuggested() { if (!suggestedSeconds) return; startTimer(suggestedSeconds, suggestedRounds); }
+
+        function tick() {
+            if (!isPaused && isRunning) {
+                timeLeft--; updateDisplay(timeLeft);
+                if (timeLeft <= 0) {
+                    playBeep();
+                    clearInterval(countdown); countdown = null; remainingRounds--;
+                    if (remainingRounds > 0) {
+                        setTimeout(() => { if (!isRunning) return; timeLeft = suggestedSeconds || timeLeft; updateDisplay(timeLeft); countdown = setInterval(tick, 1000); }, 800);
+                    } else {
+                        isRunning = false; document.getElementById('pauseBtn').textContent = 'PAUSE'; document.getElementById('timerDisplay').textContent = '✔️';
+                    }
+                }
+            }
+        }
+
+        function togglePause() { if (!isRunning) return; isPaused = !isPaused; document.getElementById('pauseBtn').textContent = isPaused ? 'RESUME' : 'PAUSE'; }
+        function resetTimer() { if (countdown) { clearInterval(countdown); countdown = null; } isPaused = false; isRunning = false; timeLeft = 0; remainingRounds = 1; updateDisplay(0); document.getElementById('pauseBtn').textContent = 'PAUSE'; stopBeep(); }
+        function updateDisplay(v) { document.getElementById('timerDisplay').textContent = v; }
+
+        function playBeep() {
+            if (muted) return;
+            const beep = document.getElementById('beep');
+            beep.pause(); beep.currentTime = 0; beep.play().catch(() => { });
+        }
+        function stopBeep() { const beep = document.getElementById('beep'); beep.pause(); beep.currentTime = 0; }
+
+        function onModalClose() {
+            resetTimer();
+            document.getElementById('modalImage').src = '';
+            document.getElementById('modalInstructions').textContent = '—';
+            collapseControls();            // ← להחזיר למצב סגור כברירת מחדל
+        }
+
+
+        const controlsWrapper = document.getElementById('controlsWrapper');
+
+        function expandControls() {
+            if (!controlsWrapper) return;
+            controlsWrapper.classList.remove('collapsed');
+            document.getElementById('controlsShowBtn')?.setAttribute('aria-expanded', 'true');
+            document.getElementById('controlsHideBtn')?.setAttribute('aria-expanded', 'true');
+        }
+
+        function collapseControls() {
+            if (!controlsWrapper) return;
+            controlsWrapper.classList.add('collapsed');
+            document.getElementById('controlsShowBtn')?.setAttribute('aria-expanded', 'false');
+            document.getElementById('controlsHideBtn')?.setAttribute('aria-expanded', 'false');
+        }
+
+renderWorkoutTabs();   // יגדיר selectedType='gym' כברירת מחדל
+renderWorkoutList();   // יבנה על סמך selectedType
+showListHideDetail();  // מצב “רשימה”
+
+    </script>
 </body>
+
 </html>
