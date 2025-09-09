@@ -1,24 +1,6 @@
 ﻿const WORKOUTS = {
   gym: [
     {
-      id: "A003",
-      title: "כוח משולב שבוע 2",
-      emoji: "🏋️‍♀️",
-      minutes: 80,
-      plan: {
-        "אימון כח": [
-          {"muscle": " גב – משיכה אנכית ","name": " משיכת פולי עליון צר             <br> Close-Grip Lat Pulldown      ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " שב זקוף כאשר כפות הרגליים על הרצפה, אחוז בידית V, משוך מטה אל מרכז החזה תוך שמירה על מרפקים קרובים לגוף. הקפד לשמור על גב זקוף, שליטה בירידה, ולנשום החוצה במאמץ. ","image": "https://cdn.shopify.com/s/files/1/0250/0362/2496/files/1204.gif?v=1644907658"},
-          {"muscle": " חזה תחתון         ","name": " פליי כבלים גבוה־לנמוך          <br> High-to-Low Cable Fly        ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " עמוד בין שני כבלים גבוהים, אחוז בידיות והבא אותן מטה בקשת אל מול המותניים. שמור על מרפקים מעט כפופים ותנועה איטית ומבוקרת. נשום החוצה בזמן הקירוב ופנימה בזמן החזרה. ","image": "https://fitliferegime.com/wp-content/uploads/2023/06/High-To-Low-Cable-fly.gif"},
-          {"muscle": " כתף אמצעית        ","name": " הרחקות צד בכבל                 <br> Cable Lateral Raise          ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " עמוד זקוף, אחוז בידית כבל נמוך ביד אחת והרם את היד הצידה עד גובה הכתף. שמור על מרפק מעט כפוף, תנועה איטית ומבוקרת ללא ניפנוף, ובטן אסופה ליציבות. נשום סדיר לאורך כל התרגיל. ","image": "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2020/03/cable-lateral-raise.gif?fit=600%2C600&ssl=1"},
-          {"muscle": " בייספס (Brachialis) ","name": " כפיפת מרפקים בכבל תחתון       <br> Cable Reverse Curl           ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " עמוד זקוף מול כבל תחתון עם מוט ישר, אחוז באחיזה הפוכה (כפות ידיים כלפי מטה) וכופף את המרפקים מעלה. שמור על מרפקים צמודים לגוף, שלוט בחזרה מטה, ונשום החוצה במאמץ. ","image": "https://fitnessprogramer.com/wp-content/uploads/2022/02/Cable-Reverse-Grip-EZ-bar-Biceps-Curl.gif"},
-          {"muscle": " ישבן              ","name": " בעיטת ירך לאחור במכשיר         <br> Glute Kickback Machine       ","timeReps": " 3 סטים × 12 חזרות לכל רגל ","instructions": " עמוד עם חזה צמוד לריפוד, הנח את כף הרגל על הפלטפורמה ודחוף לאחור ולמעלה עד ליישור הירך. שמור על גב ניטרלי, חזור לאט קדימה, ונשום החוצה בזמן הדחיפה. ","image": "https://i.pinimg.com/originals/df/f0/21/dff02169d4b40b7b5df0f8c80b17e115.gif"},
-          {"muscle": " ירך אחורית        ","name": " כפיפת ברכיים על כדור יציבה     <br> Stability Ball Hamstring Curl ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " שכב על הגב, הנח עקבים על כדור יציבה והרם את האגן לגשר. גלגל את הכדור פנימה תוך כיפוף ברכיים ושמירה על אגן יציב. חזור לאט ליישור. שמור על בטן אסופה ונשימה רציפה. ","image": "https://cdn.prod.openfit.com/uploads/2017/12/bb_stability-ball_hamstring-roll-out.gif"},
-          {"muscle": " שוק אחורי (Calves) ","name": " הרמות עקבים על BOSU           <br> Calf Raise on BOSU           ","timeReps": " 3 סטים × 12–15 חזרות  ","instructions": " עמוד על כיפת ה־BOSU ברוחב אגן, הרם עקבים מעלה על קצות האצבעות, עצור לשנייה למעלה והורד מטה למתיחה מלאה. שמור על ברכיים מעט כפופות, גב זקוף ותנועה איטית ומבוקרת. ","image": "https://blog.weightlossmadepractical.com/wp-content/uploads/2022/03/How-to-do-a-Bosu-standing-calf-raise.gif"},
-          {"muscle": " מקרבי ירך (Adductors) ","name": " סקוואט סומו עם לחיצה פנימה <br> Sumo Squat with Inward Press ","timeReps": " 3 סטים × 12 חזרות     ","instructions": " עמוד בפיסוק רחב, בצע סקוואט סומו עד שהירכיים במקביל לרצפה. בעלייה חזור למעלה תוך הפעלת לחץ קל פנימה עם הברכיים להפעלת המקרבים. שמור על גב זקוף ובטן אסופה לאורך כל התרגיל. ","image": "https://www.verywellfit.com/thmb/-i6U4nnLmsBUIqs8SvuUyhEkMeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79--Sumo-SquatGIF-df6fd051e5c1451f93e6e5fa5b6b420f.gif"},
-        ],
-      }
-    },
-    {
       id: "A004",
       title: "אירובי אליפטיקל",
       emoji: "➿",
