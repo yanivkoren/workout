@@ -170,5 +170,24 @@
         ],
       }
     },
+    {
+      id: "A009",
+      title: "פילאטיס ליבה",
+      emoji: "🧘‍♂️",
+      minutes: 30,
+      plan: {
+        "אימון ליבה": [
+          {"muscle": " ליבה – בטן עמוקה   ","name": " המאה                   <br> The Hundred             ","timeReps": " 100 תנועות (10 × 10 נשימות)    ","instructions": " שכב על הגב, רגליים בזווית 90° או מתוחות, הרם ראש וכתפיים, ידיים ישרות לצידי הגוף. בצע תנועות נמרצות מעלה–מטה עם הידיים, תוך שאיפה ל-5 ספירות ונשיפה ל-5 ספירות. שמור על גב תחתון צמוד למזרן ובטן אסופה פנימה. ","image": "https://media.self.com/photos/57d8848cd3276fe2329461e7/master/w_1600%2Cc_limit/PILATES_1001.gif"},
+          {"muscle": " ליבה – בטן קדמית   ","name": " מתיחת רגל אחת          <br> Single Leg Stretch      ","timeReps": " 8–10 חזרות לכל רגל             ","instructions": " שכב על הגב עם ראש וכתפיים מורמים. אחוז ברך כפופה בידיים בזמן שהרגל השנייה מתוחה קדימה בזווית נמוכה. החלף רגליים בקצב מבוקר. שמור על בטן אסופה, גב תחתון יציב ונשימה רציפה. ","image": "https://www.pilatesconnection.co.za/wp-content/uploads/2014/06/single-leg-stretch.gif"},
+          {"muscle": " ליבה – בטן קדמית   ","name": " מתיחת שתי רגליים       <br> Double Leg Stretch      ","timeReps": " 6–8 חזרות                       ","instructions": " במנח שכיבה על הגב עם ראש וכתפיים מורמים, התחל עם ברכיים כפופות קרוב לחזה. בהוצאת אוויר מתח את הידיים והרגליים קדימה, בשאיפה חזור וחבק שוב את הברכיים. שמור על תנועות חלקות, נשימה נכונה ובטן אסופה פנימה. ","image": "https://theroom.no/blogg/wp-content/uploads/sites/3/2017/12/doublelegstretch.gif"},
+          {"muscle": " גב תחתון, סרעפת    ","name": " הכנה לברבור           <br> Swan Prep               ","timeReps": " 6–8 חזרות                       ","instructions": " שכב על הבטן, כפות ידיים מתחת לכתפיים. בהוצאת אוויר גלגל כתפיים אחורה והרם חזה מעט מהרצפה מבלי לכווץ גב תחתון. בשאיפה חזור למטה. שמור על צוואר ארוך, מבט קדימה ונשימה רציפה. ","image": "https://sleep.brightspotcdn.com/dims4/default/438e624/2147483647/strip/true/crop/480x270+0+0/resize/480x270!/quality/90/?url=http%3A%2F%2Fmattress-firm-brightspot.s3.amazonaws.com%2Fa8%2Fbd%2F00a29ed84aab9c3011ba334398e8%2Fswan-active-rest.gif"},
+          {"muscle": " גב תחתון, סרעפת    ","name": " שחייה                  <br> Swimming                ","timeReps": " 20–30 תנועות                    ","instructions": " שכב על הבטן, ידיים ורגליים מתוחות קדימה. הרם יד ימין עם רגל שמאל, ואז יד שמאל עם רגל ימין, בקצב מהיר אך מבוקר. שמור על גב תחתון יציב, צוואר ארוך ובטן אסופה לאורך כל התרגיל. ","image": "https://i.pinimg.com/originals/02/23/af/0223afec8a41c5707617301f8446823f.gif"},
+          {"muscle": " אגן, ירכיים, גב    ","name": " גשר על כתפיים          <br> Shoulder Bridge         ","timeReps": " 8–10 חזרות                      ","instructions": " שכב על הגב, ברכיים כפופות וכפות רגליים קרובות לאגן. בהוצאת אוויר גלגל אגן והרם חוליה אחר חוליה עד שהגוף בקו ישר מהברכיים לכתפיים. בשאיפה הורד בעדינות חוליה אחר חוליה. שמור על תנועה מבוקרת, בטן אסופה וברכיים בקו האגן. ","image": "https://pilatesology.com/wp-content/uploads/2022/09/sb1.gif"},
+          {"muscle": " מותניים, ליבה צדית ","name": " בעיטות צד              <br> Side Kick Series        ","timeReps": " 6–8 חזרות לכל כיוון בכל צד     ","instructions": " שכב על הצד, רגל עליונה מתוחה בקו האגן. בעיטה קדימה תוך שמירה על יציבות אגן, ולאחר מכן החזר לאחור. בצע בקצב איטי ומדויק. הקפד לשמור על בטן אסופה, גב ישר וצוואר ארוך. ","image": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/04/HL-1.07.SideKick.gif?h=840"},
+          {"muscle": " בטן אלכסונית       ","name": " קריס קרוס              <br> Criss Cross             ","timeReps": " 8–12 חזרות לכל צד               ","instructions": " שכב על הגב, ידיים מאחורי הראש, רגליים מורמות בזווית 90°. בהוצאת אוויר קרב מרפק ימין לברך שמאל תוך יישור הרגל השנייה, החלף צדדים כמו תרגיל אופניים איטי. שמור על בטן אסופה ותנועה מבוקרת. ","image": "https://cdn-life.dailyburn.com/life/wp-content/uploads/2015/03/10042703/DailyBurn-Pilates-Workout-Criss-Cross.gif"},
+          {"muscle": " ליבה כוללת         ","name": " פלאנק עם הרמות רגליים <br> Plank with Leg Lifts    ","timeReps": " 8–10 הרמות לכל רגל              ","instructions": " עמוד בפלאנק על אמות, גוף בקו ישר מהראש לעקבים. הרם רגל אחת מספר סמ מהקרקע, החזק 1–2 שניות והחזר. החלף רגליים. שמור על אגן יציב, בטן אסופה וצוואר ארוך. אל תיתן לגב התחתון לקרוס. ","image": "https://media1.popsugar-assets.com/files/thumbor/H_gGCDnfdyVOs2nqdATv-YcZsHg/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2021/01/29/866/n/1922729/6caa69fb6014667fbeba57.12407746_IMB_J0fnZG/i/Exercise-1-Plank-With-Leg-Lift.G"},
+        ],
+      }
+    },
   ]
 };
