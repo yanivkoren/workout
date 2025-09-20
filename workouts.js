@@ -358,140 +358,6 @@
         ],
     },
     {
-      id: "A011",
-      title: "כוח משולב שבוע 3",
-      emoji: "🏋️‍♀️",
-      minutes: 40,
-      category: "אימון כח",
-      locations: ["gym"],
-      exercises: 
-        [
-                {
-        muscle: " גב – משיכה אופקית ",
-        nameHe: " חתירה עם משקולת יד               ",
-        nameEn: " One-Arm Dumbbell Row        ",
-        timeReps: " 2×12                ",
-        instructions: " עמוד עם רגל אחת קדימה והשנייה לאחור, יד תומכת על ספסל, גב ישר ובטן אסופה. משוך את המשקולת כלפי המותן תוך שמירה על מרפק קרוב לגוף, עצור 1–2 שניות בכיווץ, והחזר מטה באיטיות. הימנע מקשת בגב או מתנופה. ",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/OA_DB_ROW.gif"
-      },
-                {
-        muscle: " חזה עליון       ",
-        nameHe: " לחיצת חזה בשיפוע עם משקוליות     ",
-        nameEn: " Incline Dumbbell Press      ",
-        timeReps: " 2×12                ",
-        instructions: " שכב על ספסל משופע 30–45°, כפות רגליים יציבות על הקרקע. החזק את המשקוליות בגובה החזה, דחוף מעלה בקו אלכסוני עד ליישור מרפקים, והורד מטה בשליטה עד שהמשקוליות קרובות לחזה. שמור על בטן אסופה ומנח צוואר ניטרלי. ",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/DB_INC_BP.gif"
-      },
-                {
-        muscle: " כתף אמצעית      ",
-        nameHe: " הרחקת זרועות לצדדים עם משקולות יד ",
-        nameEn: " Dumbbell Lateral Raise      ",
-        timeReps: " 2×12                ",
-        instructions: " עמוד זקוף, ברכיים מעט כפופות ובטן אסופה. החזק משקולת בכל יד בצידי הגוף, הרם את הזרועות החוצה עד לגובה כתפיים, עם מרפקים רכים. עצור רגע וחזור מטה באיטיות. הימנע מניעור גוף או הרמה מעל קו הכתף. ",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/DB_LAT_RAISE.gif"
-      },
-                {
-        muscle: " בייספס – ראש קצר ",
-        nameHe: " כפיפת מרפקים על ספסל סקוט        ",
-        nameEn: " Preacher Curl               ",
-        timeReps: " 2×12                ",
-        instructions: " שב על ספסל סקוט, הנח זרועות על משטח התמיכה, החזק מוט או משקולת. כופף את המרפקים כלפי מעלה עד כיווץ מלא, עצור רגע וחזור מטה באיטיות עד יישור כמעט מלא. שמור על כתפיים רפויות ותנועה מבוקרת ללא תנופה. ",
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI6zQCM-Nt9jiMz1iyu5Y_pbLCKkY7Jc_GuQ&s"
-      },
-                {
-        muscle: " ישבן            ",
-        nameHe: " גשר כתפיים עם מכונה               ",
-        nameEn: " Glute Bridge Machine        ",
-        timeReps: " 2×12                ",
-        instructions: " שב במכונה עם גב על משענת עליונה, כפות רגליים יציבות ברוחב אגן. דחוף את האגן מעלה עד קו ישר בין ברכיים, אגן וכתפיים, סחט את הישבן למעלה, והחזר מטה בשליטה עד קרוב לנגיעה במושב. שמור על צוואר ניטרלי. ",
-        imageURL: "https://www.inspireusafoundation.org/file/2022/09/barbell-hip-thrust.gif"
-      },
-                {
-        muscle: " ארבע ראשי       ",
-        nameHe: " לחיצת רגליים במכשיר              ",
-        nameEn: " Leg Press Machine           ",
-        timeReps: " 2×12                ",
-        instructions: " שב במכשיר, הנח כפות רגליים על הפלטה ברוחב כתפיים, גב צמוד למשענת. דחוף את הפלטה מעלה עד ליישור כמעט מלא של הברכיים, והחזר מטה באיטיות עד שברכיים בזווית של 90°. שמור על עקבים צמודים ועל בטן אסופה. ",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/SL_LEG_PRESS.gif"
-      },
-                {
-        muscle: " ירך אחורית      ",
-        nameHe: " כפיפת רגליים במכונה              ",
-        nameEn: " Leg Curl Machine            ",
-        timeReps: " 2×12                ",
-        instructions: " שכב על הבטן במכשיר עם הקרסוליים מתחת לרפידות. כופף את הברכיים לאחור עד כיווץ מלא של הירך האחורית, עצור רגע והחזר מטה באיטיות עד ליישור כמעט מלא. שמור על גב צמוד למשטח ועל תנועה מבוקרת ללא תנופה. ",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/LEG_CURL.gif"
-      },
-                {
-        muscle: " מסובבי ירך חיצוניים ",
-        nameHe: " קלמסשל עם גומייה                ",
-        nameEn: " Clamshell with Band         ",
-        timeReps: " 2×12 (לכל צד)       ",
-        instructions: " שכב על הצד עם ברכיים כפופות וגומייה מעל הברכיים. שמור על כפות רגליים צמודות, הרם את הברך העליונה כלפי מעלה עד תחושת כיווץ בישבן הצדדי, עצור רגע והחזר מטה באיטיות. הקפד לא לסובב את האגן לאחור. ",
-        imageURL: "https://media.post.rvohealth.io/wp-content/uploads/2015/11/Clamshell-exercise-with-a-resistance-band.gif"
-      },
-        ],
-    },
-    {
-      id: "A012",
-      title: "כוח עליון שבוע 4",
-      emoji: "🏋️‍♀️",
-      minutes: 40,
-      category: "אימון כח",
-      locations: ["gym"],
-      exercises: 
-        [
-                {
-        muscle: "גב – משיכה אנכית",
-        nameHe: "מתח",
-        nameEn: "Pull-Up",
-        timeReps: "3×12",
-        instructions: "אחוז במתח באחיזה ברוחב כתפיים–כתפיים וחצי. התחל בתלייה מלאה עם בטן אסופה וצוואר ניטרלי. משוך את עצמך מעלה תוך הורדה וקירוב של השכמות, ללא כפיפת מרפקים מיותרת בתחילת התנועה. דחוף את 'הכתפיים לכיסים' ושמור על החזה פתוח. החזק 1–2 שניות בסוף הטווח ואז חזור לאט לתלייה עם שליטה אקצנטרית. הימנע מקפיצות, נדנודים, כתפיים מורמות או דחיפת ראש קדימה.",
-        imageURL: "https://hips.hearstapps.com/hmg-prod/images/pull-up-647dd51506791.gif?resize=980:*"
-      },
-                {
-        muscle: "חזה – אמצעי",
-        nameHe: "לחיצת חזה במכונה",
-        nameEn: "Chest Press Machine",
-        timeReps: "3×12",
-        instructions: "שב זקוף במכונה כאשר כפות הידיים על ידיות בגובה אמצע החזה. שמור על רגליים יציבות, בטן אסופה וגב צמוד למשענת. דחוף את הידיות קדימה עד יישור כמעט מלא של המרפקים מבלי לנעול אותם לחלוטין. החזק רגע ואז החזר את הידיות חזרה לחזה בתנועה איטית ומבוקרת. הקפד על נשימה סדירה – נשיפה בעת הדחיפה ושאיפה בעת החזרה.",
-        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Chest-Press-Machine.gif"
-      },
-                {
-        muscle: "כתף אמצעית",
-        nameHe: "מכונת הרחקת כתפיים",
-        nameEn: "Machine Lateral Raise",
-        timeReps: "3×12",
-        instructions: "שב זקוף במכונה כאשר הזרועות בצדי הגוף על כריות המכשיר. שמור על גב יציב ובטן אסופה. הרחק את הזרועות כלפי מעלה עד לגובה הכתפיים תוך שמירה על מרפקים מעט כפופים. החזק רגע בחלק העליון ואז הורד חזרה באיטיות מלאה. הקפד לא לנתק את הגב מהמשענת ולא להניע את הצוואר.",
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7F8nCqIZO7hQF8xm9HyrUodXIWxGLo_jnvg&s"
-      },
-                {
-        muscle: "בייספס – ראש ארוך",
-        nameHe: "כפיפת מרפקים עם קטלבל",
-        nameEn: "Kettlebell Hammer Curl",
-        timeReps: "3×12",
-        instructions: "עמוד זקוף עם כפות ידיים אוחזות קטלבל באחיזה ניטרלית (כפות פונות זו לזו). שמור על מרפקים צמודים לגוף ובטן אסופה. כופף את המרפקים והרם את הקטלבל מעלה עד לגובה הכתפיים תוך שמירה על פרקי כף יד ישרים. הורד באיטיות עם שליטה מלאה בחלק האקצנטרי. הימנע מתנופה או קירוב המרפקים קדימה.",
-        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif"
-      },
-                {
-        muscle: "טרייספס – ראש ארוך",
-        nameHe: "פשיטת מרפק עם קטלבל מאחורי הראש",
-        nameEn: "Kettlebell Overhead Extension",
-        timeReps: "3×12",
-        instructions: "אחוז קטלבל בשתי ידיים והרם אותו מעל הראש כך שהידיים ישרות. כופף את המרפקים והורד את הקטלבל מאחורי הראש תוך שמירה על זרועות יציבות צמודות לאוזניים. הארך את המרפקים מעלה בחזרה ליישור מלא. שמור על בטן אסופה ועמידה זקופה לאורך כל התרגיל.",
-        imageURL: "https://gymvisual.com/img/p/2/6/2/2/8/26228.gif"
-      },
-                {
-        muscle: "ייצוב כתף",
-        nameHe: "רוטציה חיצונית ביד אחת בכבל",
-        nameEn: "Single Arm Cable External Rotation",
-        timeReps: "3×12",
-        instructions: "עמוד צידי למכשיר כבלים בגובה מרפק. החזק את ידית הכבל ביד הרחוקה מהמכשיר, שמור על מרפק כפוף 90° וצמוד לגוף. בצע סיבוב חיצוני של הכתף – משוך את היד החוצה לצד תוך שמירה על מרפק צמוד. החזר חזרה באיטיות לנקודת ההתחלה. הקפד על גב זקוף, בטן אסופה ותנועה חלקה ללא תנופה.",
-        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/CABLE_EXT_ROT.gif"
-      },
-        ],
-    },
-    {
       id: "A013",
       title: "כוח תחתון שבוע 4",
       emoji: "🏋️‍♀️",
@@ -622,6 +488,183 @@
         timeReps: "2×12 לכל רגל",
         instructions: "קבע פולי נמוך עם רצועת קרסול על רגל העבודה. עמוד זקוף, צלעות מעל אגן, בטן אסופה וידיים אקטיביות לייצוב. גרף את הברך מעלה עד כ־90° בירך בלי להטות את הגו או להרים כתף; עצור חצי שנייה בראש התנועה ושמור כף רגל בפלקס. החזר באיטיות בשליטה, שמור ירך תומכת חזקה וברך שאינה קורסת פנימה. החלף צד אחרי סט; עבוד בטמפו חלק ללא משיכה חדה של הכבל.",
         imageURL: "https://liftmanual.com/wp-content/uploads/2023/04/band-hip-flexion.gif"
+      },
+        ],
+    },
+    {
+      id: "A015",
+      title: "אימון ליבה 1",
+      emoji: "🤸‍♀️",
+      minutes: 10,
+      category: "אימון ליבה",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: " בטן תחתונה + ירך קדמית   ",
+        nameHe: " הרמות ברכיים בתלייה            ",
+        nameEn: " Hanging Knee Raise             ",
+        timeReps: "12 חזרות",
+        instructions: " אחוז במתח ברוחב כתפיים–כתפיים וחצי; התחל בתלייה מלאה, בטן אסופה וצוואר ניטרלי; העלה ברכיים בזווית 90° אל החזה תוך שמירה על שליטה; הורד לאט עד ליישור כמעט מלא; הימנע מקפיצות ונדנוד; שלוט בנשיפה בעלייה ובשאיפה בירידה. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hanging-Knee-Raises.gif"
+      },
+                {
+        muscle: " זוקפי גב + ליבה         ",
+        nameHe: " בירד דוג הארכת גפיים           ",
+        nameEn: " Bird Dog Extension             ",
+        timeReps: "8 חזרות לכל צד     ",
+        instructions: " עמוד על 4 (כפות ידיים וברכיים); שמור גב נייטרלי ובטן אסופה; מתח יד קדימה ורגל נגדית אחורה בקו ישר; החזק 1–2ש׳ בסוף התנועה; החזר באיטיות וחזור עם הצד השני; הקפד לא לקמר את הגב ולא להטות את האגן. ",
+        imageURL: "https://images.ctfassets.net/4f3rgqwzdznj/5d2egksWLycwkFFpN1NzCa/8ca1ff665efa098a0451d7a343128c33/Bird-Dog_1296x729.gif"
+      },
+                {
+        muscle: " אלכסוני בטן + ליבה צדית ",
+        nameHe: " פלאנק צד עם הושטת יד           ",
+        nameEn: " Side Plank with Reach Through  ",
+        timeReps: "30 שניות - להחליף צדדים בסטים     ",
+        instructions: " הישען על האמה בצד הגוף, רגליים מונחות זו על זו; יד עליונה מתוחה מעלה; הכנס את היד העליונה מתחת לגוף תוך סיבוב בית החזה; חזור לפתיחה מעלה; שמור אגן מורם, צוואר נייטרלי ובטן חזקה לכל אורך הביצוע. ",
+        imageURL: "https://media.post.rvohealth.io/wp-content/uploads/2020/09/Side-plank-with-a-reach-under.gif"
+      },
+                {
+        muscle: " בטן + סיבולת לב ריאה    ",
+        nameHe: " מטפסי הרים                     ",
+        nameEn: " Mountain Climbers              ",
+        timeReps: " 40 שניות            ",
+        instructions: " עמדת פלאנק על כפות ידיים; ברכיים כפופות ואלסטיות; הבא ברך אחת קדימה אל החזה בתנועה מהירה אך מבוקרת, תוך החלפה לסירוגין; שמור על גב ישר, כתפיים מעל כפות הידיים ובטן אסופה; הקפד על נשימה קצבית. ",
+        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/484.gif"
+      },
+                {
+        muscle: " ליבה קדמית              ",
+        nameHe: " פלאנק קדמי                     ",
+        nameEn: " Front Plank                    ",
+        timeReps: " 40 שניות            ",
+        instructions: " הישען על אמות וכפות רגליים; שמור גוף בקו ישר מהראש עד העקבים; אגן לא גבוה מדי ולא שוקע; בטן אסופה, כתפיים לא לקרוס; שמור על צוואר בהמשך לעמוד השדרה ונשימה סדירה לאורך כל הזמן. ",
+        imageURL: "https://i.ytimg.com/vi/K2UZq6uq_mY/maxresdefault.jpg"
+      },
+                {
+        muscle: " סרעפת + נשימה           ",
+        nameHe: " נשימה סרעפתית בשכיבה          ",
+        nameEn: " Diaphragmatic Breathing (Supine)",
+        timeReps: "5 מחזורים           ",
+        instructions: " שכב על הגב, ברכיים כפופות, כף יד אחת על הבטן והשנייה על החזה; שאף באיטיות דרך האף, ניפח את הבטן החוצה ושמור את החזה יציב; נשוף דרך הפה והכנס את הבטן פנימה; הקפד על קצב רגוע ושליטה מלאה בכל מחזור נשימה. ",
+        imageURL: "https://i0.wp.com/morgana.nyc/wp-content/uploads/2023/03/Belly-breathing.gif?resize=525%2C315&ssl=1"
+      },
+        ],
+    },
+    {
+      id: "A016",
+      title: "אימון ליבה 2",
+      emoji: "🤸‍♀️",
+      minutes: 10,
+      category: "אימון ליבה",
+      locations: ["home","gym"],
+      exercises: 
+        [
+                {
+        muscle: " בטן – כפיפה קדמית ",
+        nameHe: " כפיפות בטן סטנדרטיות ",
+        nameEn: " Basic Crunch ",
+        timeReps: " 15 חזרות ",
+        instructions: " שכב על הגב, ברכיים כפופות וכפות רגליים על הרצפה, ידיים מאחורי הראש או חזה. הרם את השכמות מהרצפה תוך כדי כיווץ הבטן פנימה, שמור על גב תחתון צמוד למזרן. נשוף בעלייה ושאף בירידה. אל תמשוך בצוואר עם הידיים והימנע מתנועות חדות. ",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/CRUNCH.gif"
+      },
+                {
+        muscle: " בטן – אנטי־סיבוב ",
+        nameHe: " פאלוף פרס",
+        nameEn: " Pallof Press ",
+        timeReps: " 10 חזרות לכל צד (2–3 שניות החזקה) ",
+        instructions: " עמוד זקוף, כפות רגליים ברוחב אגן, אחוז גומייה או משקל בידיים מול החזה. לחץ קדימה עד ליישור מלא של הידיים ושמור על גוף יציב מול הכוח שמושך הצידה. החזק 2–3 שניות וחזור באיטיות. הקפד לא לסובב את הכתפיים או האגן, נשוף בלחיצה ושאף בחזרה. ",
+        imageURL: "https://www.dickssportinggoods.com/content/dam/protips/imported-from-blob-storage/2019/08/PalloffPress.gif"
+      },
+                {
+        muscle: " גב תחתון – ייצוב דינמי ",
+        nameHe: " דד באג ",
+        nameEn: " Dead Bug ",
+        timeReps: " 10 חזרות לכל צד ",
+        instructions: " שכב על הגב, זרועות ישרות מעלה וברכיים בזווית 90°. הורד באיטיות יד אחת ורגל נגדית לכיוון הרצפה תוך שמירה על גב תחתון צמוד למזרן. חזור לנקודת ההתחלה ובצע לצד השני. שמור על נשימה רציפה ונשוף בזמן הורדת הגפיים. הימנע מקשת בגב. ",
+        imageURL: "https://downloads.ctfassets.net/6ilvqec50fal/YIqGvUegFUjlFCmh1R38b/32275009bb242a73082ae2dfaec4cece/Dead_Bug.gif"
+      },
+                {
+        muscle: " גב תחתון – אנטי־כיפוף קדמי ",
+        nameHe: " פלאנק דינמי (עליות/ירידות אמות–כפות ידיים) ",
+        nameEn: " Dynamic Plank (Up-Downs) ",
+        timeReps: " 25 שניות ",
+        instructions: " התחל במנח פלאנק על האמות, גוף בקו ישר מהראש ועד העקבים. העבר משקל ליד אחת ודחוף לעלייה לעמדת פלאנק על כפות הידיים, ולאחר מכן חזור באיטיות חזרה לאמות. המשך לעלות ולרדת לסירוגין. שמור על בטן אסופה וגב ישר, הימנע מתנועתיות יתר באגן. נשוף בעלייה ושאף בירידה. ",
+        imageURL: "https://media.self.com/photos/58dd5de554b00b6f47fad908/master/w_320%2Cc_limit/Plank-up-downs.gif"
+      },
+                {
+        muscle: " אגן ומותן – ייצוב/הטיות אגן ",
+        nameHe: " גשר ישבן חד־רגלי ",
+        nameEn: " Single-Leg Glute Bridge ",
+        timeReps: " 10 חזרות לכל רגל ",
+        instructions: " שכב על הגב, כף רגל אחת על הרצפה והשנייה מורמת ישרה קדימה. דחוף בעקב הקרקע והרם את האגן עד לקו ישר בין כתפיים–אגן–ברך. החזק 1–2 שניות למעלה, נשוף בזמן ההרמה ושאף בירידה. שמור על אגן מאוזן והימנע מקריסת גב תחתון. ",
+        imageURL: "https://images-prod.healthline.com/hlcmsresource/images/topic_centers/Fitness-Exercise/648x364_5_Glute_Bridge_Variations_One_Legged_Glute_Bridge.gif"
+      },
+                {
+        muscle: " שרירים תומכים – אנטי־כיפוף צדי ",
+        nameHe: " סייד פלאנק עם הרמת רגל (או סטטי רגיל) ",
+        nameEn: " Side Plank with Leg Lift ",
+        timeReps: " 20 שניות לכל צד ",
+        instructions: " שכב על הצד, הישען על האמה, מרפק מתחת לכתף, רגליים ישרות ומונחות זו על גבי זו. הרם את האגן ליישור מלא ושמור על גוף בקו ישר. בגרסה מתקדמת הרם גם את הרגל העליונה ל־20–30 ס״מ. החזק את המנח או בצע הרמות איטיות. שמור על צוואר ניטרלי, בטן אסופה ונשימה רציפה. ",
+        imageURL: "https://media1.popsugar-assets.com/files/thumbor/Snh4DBbz1j6sD4IWPEybWl721o4/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2021/08/13/850/n/1922729/319791d1be569e73_IMB_dBshFS/i/Set-1-Side-Plank-Leg-Lift-Left.GIF"
+      },
+        ],
+    },
+    {
+      id: "A017",
+      title: "אימון ליבה 3",
+      emoji: "🤸‍♀️",
+      minutes: 10,
+      category: "אימון ליבה",
+      locations: ["home","gym"],
+      exercises: 
+        [
+                {
+        muscle: " בטן תחתונה              ",
+        nameHe: " כפיפה הפוכה                  ",
+        nameEn: " Reverse Crunch                 ",
+        timeReps: " 10–15 חזרות                ",
+        instructions: " שכב על הגב, רגליים כפופות בזווית 90° או ישרות, ידיים לצידי הגוף. אסוף את הבטן והרם את האגן מהרצפה בגלגול מעלה תוך כיווץ שרירי הבטן התחתונה. חזור מטה באיטיות תוך שליטה, ושמור על גב תחתון צמוד למזרן לכל אורך התנועה. ",
+        imageURL: "https://spotebi.com/wp-content/uploads/2017/10/reverse-crunch-and-twist-exercise-illustration-spotebi.gif"
+      },
+                {
+        muscle: " גב תחתון + ישבן         ",
+        nameHe: " גוד מורנינג                  ",
+        nameEn: " Good Morning                   ",
+        timeReps: " 10–12 חזרות                ",
+        instructions: " עמוד זקוף, כפות רגליים ברוחב אגן, מוט/משקולות קלות על הגב העליון. שמור גב ניטרלי ובטן אסופה, ודחוף את האגן לאחור תוך כיפוף קל בברכיים עד שהגב כמעט מקביל לרצפה. עלה חזרה לזקיפה מלאה תוך הפעלת ישבן וגב תחתון. יש להימנע מקימור גב או עומס יתר. ",
+        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/7.gif"
+      },
+                {
+        muscle: " אלכסוני בטן             ",
+        nameHe: " טוויסט רוסי                  ",
+        nameEn: " Russian Twist                  ",
+        timeReps: " 12–16 חזרות לכל צד         ",
+        instructions: " שב על הרצפה, רגליים כפופות ומורמות קלות (או מונחות לקרקע להקלה), גב בזווית לאחור. החזק משקולת/כדור או ללא ציוד, וסובב את פלג הגוף העליון מצד לצד בנשימה סדירה, תוך שמירה על גב ארוך ובטן אסופה. אל תקרוס עם הגב לאחור. ",
+        imageURL: "https://media.self.com/photos/602fea82c49f836c6103b131/master/w_1600%2Cc_limit/russian-twist-no-weight-Amanda_047.gif"
+      },
+                {
+        muscle: " גב תחתון + ליבה         ",
+        nameHe: " בירד דוג סטטי (יד–רגל נגדית) ",
+        nameEn: " Quadruped Opposite Arm/Leg Hold",
+        timeReps: " 15–20 שניות לכל צד         ",
+        instructions: " עמוד על 4, ידיים מתחת לכתפיים וברכיים מתחת לאגן. מתח יד קדמית ורגל אחורית נגדית בקו ישר, שמור צוואר ניטרלי ובטן אסופה. החזק את המנח 15–20 שניות, חזור באיטיות וחלף צד. הקפד שלא להטות אגן או לקמר גב. ",
+        imageURL: "https://cdn.mos.cms.futurecdn.net/6cTqFSzt97kkYX8Vqoavh.jpg"
+      },
+                {
+        muscle: " ליבה קדמית + כתפיים     ",
+        nameHe: " פלאנק עם נגיעות כתף          ",
+        nameEn: " Plank with Shoulder Tap        ",
+        timeReps: " 20–30 שניות / 8–10 נגיעות ",
+        instructions: " התמקם בפלאנק גבוה (כפות ידיים מתחת לכתפיים, גוף בקו ישר). שמור אגן יציב ובטן אסופה, והרם יד אחת לגעת בכתף נגדית לסירוגין. בצע באיטיות, תוך שליטה מלאה וללא סיבוב אגן. שמור על נשימה סדירה. ",
+        imageURL: "https://media.self.com/photos/58fa4df75d8a5e34a74a4cbc/master/w_1600%2Cc_limit/strongest-self-shoulder-tap.gif"
+      },
+                {
+        muscle: " ישבן (Glute Medius)      ",
+        nameHe: " הרחקת ירך בשכיבה על הצד      ",
+        nameEn: " Side-Lying Hip Abduction       ",
+        timeReps: " 12–15 חזרות לכל רגל        ",
+        instructions: " שכב על הצד, רגל תחתונה כפופה מעט ורגל עליונה ישרה. שמור גוף מיושר ובטן אסופה, והרם את הרגל העליונה בקו ישר כלפי מעלה עד כ־45°. הורד מטה באיטיות ושלוט בטווח. הימנע מנדנוד או הטיית אגן אחורה/קדימה. אפשר להוסיף גומייה לקרסול להקשות. ",
+        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/1361.gif"
       },
         ],
     },
