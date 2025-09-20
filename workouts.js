@@ -358,65 +358,6 @@
         ],
     },
     {
-      id: "A013",
-      title: "כוח תחתון שבוע 4",
-      emoji: "🏋️‍♀️",
-      minutes: 40,
-      category: "אימון כח",
-      locations: ["gym"],
-      exercises: 
-        [
-                {
-        muscle: " ישבן + ארבע ראשי  ",
-        nameHe: " עליות מדרגה גבוהות                            ",
-        nameEn: " High Step-Up                       ",
-        timeReps: " 3×12 לכל רגל      ",
-        instructions: " עמוד מול ספסל/קופסה גבוהה, כף רגל אחת על המשטח והשנייה על הרצפה. דחוף דרך העקב שעל המדרגה, עלה ליישור מלא של הירך והברך, שמור על גב ניטרלי ובטן אסופה. הורד את הרגל השנייה לאט ובשליטה. הימנע מדחיפה מהרגל שעל הקרקע. ",
-        imageURL: "https://blog.myfitnesspal.com/wp-content/uploads/2019/07/High-box-step-ups.gif"
-      },
-                {
-        muscle: " ארבע ראשי + ישבן  ",
-        nameHe: " סקוואט בולגרי                                 ",
-        nameEn: " Bulgarian Split Squat              ",
-        timeReps: " 3×12 לכל רגל      ",
-        instructions: " עמוד בפסיעה קדימה עם רגל אחורית מונחת על ספסל/משטח מוגבה. שמור גב זקוף ובטן אסופה, כופף את הברך הקדמית עד שהירך כמעט מקבילה לקרקע. דחוף דרך העקב בחזרה לעמידה. הימנע מקריסת ברך פנימה ושמור מבט קדימה. ",
-        imageURL: "https://www.meridian-fitness.co.uk/wp-content/uploads/2025/03/BulgarianSplit.gif"
-      },
-                {
-        muscle: " ירך אחורית        ",
-        nameHe: " כפיפת ירך נורדית                             ",
-        nameEn: " Nordic Hamstring Curl              ",
-        timeReps: " 3×12              ",
-        instructions: " כרע על ברכיים כשהרגליים מקובעות (ע'י פרטנר או מתקן). הגוף יורד קדימה באיטיות כיחידה אחת מהברכיים עד הכתפיים, תוך שליטה אקצנטרית בשרירי הירך האחורית. ניתן להיעזר בידיים לבלימת הנפילה ולדחיפה חזרה לנקודת ההתחלה. ",
-        imageURL: "https://cdn.shopify.com/s/files/1/0568/6280/2107/files/nordic-curl_600x600.gif"
-      },
-                {
-        muscle: " שוק אחורי         ",
-        nameHe: " הליכת חקלאי על אצבעות                        ",
-        nameEn: " Farmer’s Walk on Toes (Dumbbells)  ",
-        timeReps: " 3×12 צעדים לכל כיוון ",
-        instructions: " אחוז משקולת יד בכל יד, עלה לעמידה על קצות האצבעות ושמור על עקבים מורמים. צעד קדימה לאט ובשליטה תוך שמירה על יציבה זקופה, בטן אסופה וכתפיים לאחור. שמור על נשימה רציפה והימנע מהורדת עקבים בזמן ההליכה. ",
-        imageURL: "https://movements.isielitetraining.com/wp-content/uploads/2025/08/Kettlebell-Farmer-Walk-on-Toes.gif"
-      },
-                {
-        muscle: " חוטפים            ",
-        nameHe: " מכונת הרחקת ירך                              ",
-        nameEn: " Hip Abduction Machine              ",
-        timeReps: " 3×12              ",
-        instructions: " שב במכונה עם גב צמוד למשענת, כפות רגליים על המשטחים. דחוף את הרגליים החוצה עד לטווח מלא תוך שמירה על גב יציב ובטן אסופה. החזר את הרגליים לאט למרכז בשליטה מלאה. הימנע מתנופה ומהטיית הגב. ",
-        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif"
-      },
-                {
-        muscle: " מקרבי ירך         ",
-        nameHe: " מכונת קירוב ירך בישיבה                       ",
-        nameEn: " Seated Adduction Machine           ",
-        timeReps: " 3×12              ",
-        instructions: " שב במכונה עם רגליים פתוחות על המשטחים בצדדים. הצמד את הרגליים פנימה עד קירוב מלא תוך כיווץ שרירי הירך הפנימיים. החזר לאט ובשליטה למצב פתוח. שמור על גב צמוד למשענת, בטן אסופה ונשימה סדירה. ",
-        imageURL: "https://www.inspireusafoundation.org/file/2023/11/hip-abduction-machine.gif"
-      },
-        ],
-    },
-    {
       id: "A014",
       title: "כוח משולב שבוע 4",
       emoji: "🏋️‍♀️",
@@ -488,65 +429,6 @@
         timeReps: "2×12 לכל רגל",
         instructions: "קבע פולי נמוך עם רצועת קרסול על רגל העבודה. עמוד זקוף, צלעות מעל אגן, בטן אסופה וידיים אקטיביות לייצוב. גרף את הברך מעלה עד כ־90° בירך בלי להטות את הגו או להרים כתף; עצור חצי שנייה בראש התנועה ושמור כף רגל בפלקס. החזר באיטיות בשליטה, שמור ירך תומכת חזקה וברך שאינה קורסת פנימה. החלף צד אחרי סט; עבוד בטמפו חלק ללא משיכה חדה של הכבל.",
         imageURL: "https://liftmanual.com/wp-content/uploads/2023/04/band-hip-flexion.gif"
-      },
-        ],
-    },
-    {
-      id: "A015",
-      title: "אימון ליבה 1",
-      emoji: "🤸‍♀️",
-      minutes: 10,
-      category: "אימון ליבה",
-      locations: ["gym"],
-      exercises: 
-        [
-                {
-        muscle: " בטן תחתונה + ירך קדמית   ",
-        nameHe: " הרמות ברכיים בתלייה            ",
-        nameEn: " Hanging Knee Raise             ",
-        timeReps: "12 חזרות",
-        instructions: " אחוז במתח ברוחב כתפיים–כתפיים וחצי; התחל בתלייה מלאה, בטן אסופה וצוואר ניטרלי; העלה ברכיים בזווית 90° אל החזה תוך שמירה על שליטה; הורד לאט עד ליישור כמעט מלא; הימנע מקפיצות ונדנוד; שלוט בנשיפה בעלייה ובשאיפה בירידה. ",
-        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hanging-Knee-Raises.gif"
-      },
-                {
-        muscle: " זוקפי גב + ליבה         ",
-        nameHe: " בירד דוג הארכת גפיים           ",
-        nameEn: " Bird Dog Extension             ",
-        timeReps: "8 חזרות לכל צד     ",
-        instructions: " עמוד על 4 (כפות ידיים וברכיים); שמור גב נייטרלי ובטן אסופה; מתח יד קדימה ורגל נגדית אחורה בקו ישר; החזק 1–2ש׳ בסוף התנועה; החזר באיטיות וחזור עם הצד השני; הקפד לא לקמר את הגב ולא להטות את האגן. ",
-        imageURL: "https://images.ctfassets.net/4f3rgqwzdznj/5d2egksWLycwkFFpN1NzCa/8ca1ff665efa098a0451d7a343128c33/Bird-Dog_1296x729.gif"
-      },
-                {
-        muscle: " אלכסוני בטן + ליבה צדית ",
-        nameHe: " פלאנק צד עם הושטת יד           ",
-        nameEn: " Side Plank with Reach Through  ",
-        timeReps: "30 שניות - להחליף צדדים בסטים     ",
-        instructions: " הישען על האמה בצד הגוף, רגליים מונחות זו על זו; יד עליונה מתוחה מעלה; הכנס את היד העליונה מתחת לגוף תוך סיבוב בית החזה; חזור לפתיחה מעלה; שמור אגן מורם, צוואר נייטרלי ובטן חזקה לכל אורך הביצוע. ",
-        imageURL: "https://media.post.rvohealth.io/wp-content/uploads/2020/09/Side-plank-with-a-reach-under.gif"
-      },
-                {
-        muscle: " בטן + סיבולת לב ריאה    ",
-        nameHe: " מטפסי הרים                     ",
-        nameEn: " Mountain Climbers              ",
-        timeReps: " 40 שניות            ",
-        instructions: " עמדת פלאנק על כפות ידיים; ברכיים כפופות ואלסטיות; הבא ברך אחת קדימה אל החזה בתנועה מהירה אך מבוקרת, תוך החלפה לסירוגין; שמור על גב ישר, כתפיים מעל כפות הידיים ובטן אסופה; הקפד על נשימה קצבית. ",
-        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/484.gif"
-      },
-                {
-        muscle: " ליבה קדמית              ",
-        nameHe: " פלאנק קדמי                     ",
-        nameEn: " Front Plank                    ",
-        timeReps: " 40 שניות            ",
-        instructions: " הישען על אמות וכפות רגליים; שמור גוף בקו ישר מהראש עד העקבים; אגן לא גבוה מדי ולא שוקע; בטן אסופה, כתפיים לא לקרוס; שמור על צוואר בהמשך לעמוד השדרה ונשימה סדירה לאורך כל הזמן. ",
-        imageURL: "https://i.ytimg.com/vi/K2UZq6uq_mY/maxresdefault.jpg"
-      },
-                {
-        muscle: " סרעפת + נשימה           ",
-        nameHe: " נשימה סרעפתית בשכיבה          ",
-        nameEn: " Diaphragmatic Breathing (Supine)",
-        timeReps: "5 מחזורים           ",
-        instructions: " שכב על הגב, ברכיים כפופות, כף יד אחת על הבטן והשנייה על החזה; שאף באיטיות דרך האף, ניפח את הבטן החוצה ושמור את החזה יציב; נשוף דרך הפה והכנס את הבטן פנימה; הקפד על קצב רגוע ושליטה מלאה בכל מחזור נשימה. ",
-        imageURL: "https://i0.wp.com/morgana.nyc/wp-content/uploads/2023/03/Belly-breathing.gif?resize=525%2C315&ssl=1"
       },
         ],
     },
