@@ -358,6 +358,124 @@
         ],
     },
     {
+      id: "A012",
+      title: "כוח עליון שבוע 4",
+      emoji: "🏋️‍♀️",
+      minutes: 40,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: "גב – משיכה אנכית",
+        nameHe: "מתח",
+        nameEn: "Pull-Up",
+        timeReps: "3×12",
+        instructions: "אחוז במתח באחיזה ברוחב כתפיים–כתפיים וחצי. התחל בתלייה מלאה עם בטן אסופה וצוואר ניטרלי. משוך את עצמך מעלה תוך הורדה וקירוב של השכמות, ללא כפיפת מרפקים מיותרת בתחילת התנועה. דחוף את 'הכתפיים לכיסים' ושמור על החזה פתוח. החזק 1–2 שניות בסוף הטווח ואז חזור לאט לתלייה עם שליטה אקצנטרית. הימנע מקפיצות, נדנודים, כתפיים מורמות או דחיפת ראש קדימה.",
+        imageURL: "https://hips.hearstapps.com/hmg-prod/images/pull-up-647dd51506791.gif?resize=980:*"
+      },
+                {
+        muscle: "חזה – אמצעי",
+        nameHe: "לחיצת חזה במכונה",
+        nameEn: "Chest Press Machine",
+        timeReps: "3×12",
+        instructions: "שב זקוף במכונה כאשר כפות הידיים על ידיות בגובה אמצע החזה. שמור על רגליים יציבות, בטן אסופה וגב צמוד למשענת. דחוף את הידיות קדימה עד יישור כמעט מלא של המרפקים מבלי לנעול אותם לחלוטין. החזק רגע ואז החזר את הידיות חזרה לחזה בתנועה איטית ומבוקרת. הקפד על נשימה סדירה – נשיפה בעת הדחיפה ושאיפה בעת החזרה.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Chest-Press-Machine.gif"
+      },
+                {
+        muscle: "כתף אמצעית",
+        nameHe: "מכונת הרחקת כתפיים",
+        nameEn: "Machine Lateral Raise",
+        timeReps: "3×12",
+        instructions: "שב זקוף במכונה כאשר הזרועות בצדי הגוף על כריות המכשיר. שמור על גב יציב ובטן אסופה. הרחק את הזרועות כלפי מעלה עד לגובה הכתפיים תוך שמירה על מרפקים מעט כפופים. החזק רגע בחלק העליון ואז הורד חזרה באיטיות מלאה. הקפד לא לנתק את הגב מהמשענת ולא להניע את הצוואר.",
+        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7F8nCqIZO7hQF8xm9HyrUodXIWxGLo_jnvg&s"
+      },
+                {
+        muscle: "בייספס – ראש ארוך",
+        nameHe: "כפיפת מרפקים עם קטלבל",
+        nameEn: "Kettlebell Hammer Curl",
+        timeReps: "3×12",
+        instructions: "עמוד זקוף עם כפות ידיים אוחזות קטלבל באחיזה ניטרלית (כפות פונות זו לזו). שמור על מרפקים צמודים לגוף ובטן אסופה. כופף את המרפקים והרם את הקטלבל מעלה עד לגובה הכתפיים תוך שמירה על פרקי כף יד ישרים. הורד באיטיות עם שליטה מלאה בחלק האקצנטרי. הימנע מתנופה או קירוב המרפקים קדימה.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif"
+      },
+                {
+        muscle: "טרייספס – ראש ארוך",
+        nameHe: "פשיטת מרפק עם קטלבל מאחורי הראש",
+        nameEn: "Kettlebell Overhead Extension",
+        timeReps: "3×12",
+        instructions: "אחוז קטלבל בשתי ידיים והרם אותו מעל הראש כך שהידיים ישרות. כופף את המרפקים והורד את הקטלבל מאחורי הראש תוך שמירה על זרועות יציבות צמודות לאוזניים. הארך את המרפקים מעלה בחזרה ליישור מלא. שמור על בטן אסופה ועמידה זקופה לאורך כל התרגיל.",
+        imageURL: "https://gymvisual.com/img/p/2/6/2/2/8/26228.gif"
+      },
+                {
+        muscle: "ייצוב כתף",
+        nameHe: "רוטציה חיצונית ביד אחת בכבל",
+        nameEn: "Single Arm Cable External Rotation",
+        timeReps: "3×12",
+        instructions: "עמוד צידי למכשיר כבלים בגובה מרפק. החזק את ידית הכבל ביד הרחוקה מהמכשיר, שמור על מרפק כפוף 90° וצמוד לגוף. בצע סיבוב חיצוני של הכתף – משוך את היד החוצה לצד תוך שמירה על מרפק צמוד. החזר חזרה באיטיות לנקודת ההתחלה. הקפד על גב זקוף, בטן אסופה ותנועה חלקה ללא תנופה.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/CABLE_EXT_ROT.gif"
+      },
+        ],
+    },
+    {
+      id: "A013",
+      title: "כוח תחתון שבוע 4",
+      emoji: "🏋️‍♀️",
+      minutes: 40,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: " ישבן + ארבע ראשי  ",
+        nameHe: " עליות מדרגה גבוהות                            ",
+        nameEn: " High Step-Up                       ",
+        timeReps: " 3×12 לכל רגל      ",
+        instructions: " עמוד מול ספסל/קופסה גבוהה, כף רגל אחת על המשטח והשנייה על הרצפה. דחוף דרך העקב שעל המדרגה, עלה ליישור מלא של הירך והברך, שמור על גב ניטרלי ובטן אסופה. הורד את הרגל השנייה לאט ובשליטה. הימנע מדחיפה מהרגל שעל הקרקע. ",
+        imageURL: "https://blog.myfitnesspal.com/wp-content/uploads/2019/07/High-box-step-ups.gif"
+      },
+                {
+        muscle: " ארבע ראשי + ישבן  ",
+        nameHe: " סקוואט בולגרי                                 ",
+        nameEn: " Bulgarian Split Squat              ",
+        timeReps: " 3×12 לכל רגל      ",
+        instructions: " עמוד בפסיעה קדימה עם רגל אחורית מונחת על ספסל/משטח מוגבה. שמור גב זקוף ובטן אסופה, כופף את הברך הקדמית עד שהירך כמעט מקבילה לקרקע. דחוף דרך העקב בחזרה לעמידה. הימנע מקריסת ברך פנימה ושמור מבט קדימה. ",
+        imageURL: "https://www.meridian-fitness.co.uk/wp-content/uploads/2025/03/BulgarianSplit.gif"
+      },
+                {
+        muscle: " ירך אחורית        ",
+        nameHe: " כפיפת ירך נורדית                             ",
+        nameEn: " Nordic Hamstring Curl              ",
+        timeReps: " 3×12              ",
+        instructions: " כרע על ברכיים כשהרגליים מקובעות (ע'י פרטנר או מתקן). הגוף יורד קדימה באיטיות כיחידה אחת מהברכיים עד הכתפיים, תוך שליטה אקצנטרית בשרירי הירך האחורית. ניתן להיעזר בידיים לבלימת הנפילה ולדחיפה חזרה לנקודת ההתחלה. ",
+        imageURL: "https://cdn.shopify.com/s/files/1/0568/6280/2107/files/nordic-curl_600x600.gif"
+      },
+                {
+        muscle: " שוק אחורי         ",
+        nameHe: " הליכת חקלאי על אצבעות                        ",
+        nameEn: " Farmer’s Walk on Toes (Dumbbells)  ",
+        timeReps: " 3×12 צעדים לכל כיוון ",
+        instructions: " אחוז משקולת יד בכל יד, עלה לעמידה על קצות האצבעות ושמור על עקבים מורמים. צעד קדימה לאט ובשליטה תוך שמירה על יציבה זקופה, בטן אסופה וכתפיים לאחור. שמור על נשימה רציפה והימנע מהורדת עקבים בזמן ההליכה. ",
+        imageURL: "https://movements.isielitetraining.com/wp-content/uploads/2025/08/Kettlebell-Farmer-Walk-on-Toes.gif"
+      },
+                {
+        muscle: " חוטפים            ",
+        nameHe: " מכונת הרחקת ירך                              ",
+        nameEn: " Hip Abduction Machine              ",
+        timeReps: " 3×12              ",
+        instructions: " שב במכונה עם גב צמוד למשענת, כפות רגליים על המשטחים. דחוף את הרגליים החוצה עד לטווח מלא תוך שמירה על גב יציב ובטן אסופה. החזר את הרגליים לאט למרכז בשליטה מלאה. הימנע מתנופה ומהטיית הגב. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif"
+      },
+                {
+        muscle: " מקרבי ירך         ",
+        nameHe: " מכונת קירוב ירך בישיבה                       ",
+        nameEn: " Seated Adduction Machine           ",
+        timeReps: " 3×12              ",
+        instructions: " שב במכונה עם רגליים פתוחות על המשטחים בצדדים. הצמד את הרגליים פנימה עד קירוב מלא תוך כיווץ שרירי הירך הפנימיים. החזר לאט ובשליטה למצב פתוח. שמור על גב צמוד למשענת, בטן אסופה ונשימה סדירה. ",
+        imageURL: "https://www.inspireusafoundation.org/file/2023/11/hip-abduction-machine.gif"
+      },
+        ],
+    },
+    {
       id: "A014",
       title: "כוח משולב שבוע 4",
       emoji: "🏋️‍♀️",
