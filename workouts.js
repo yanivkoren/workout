@@ -358,65 +358,6 @@
         ],
     },
     {
-      id: "A017",
-      title: "אימון ליבה 3",
-      emoji: "🤸‍♀️",
-      minutes: 10,
-      category: "אימון ליבה",
-      locations: ["home","gym"],
-      exercises: 
-        [
-                {
-        muscle: " בטן תחתונה              ",
-        nameHe: " כפיפה הפוכה                  ",
-        nameEn: " Reverse Crunch                 ",
-        timeReps: " 10–15 חזרות                ",
-        instructions: " שכב על הגב, רגליים כפופות בזווית 90° או ישרות, ידיים לצידי הגוף. אסוף את הבטן והרם את האגן מהרצפה בגלגול מעלה תוך כיווץ שרירי הבטן התחתונה. חזור מטה באיטיות תוך שליטה, ושמור על גב תחתון צמוד למזרן לכל אורך התנועה. ",
-        imageURL: "https://spotebi.com/wp-content/uploads/2017/10/reverse-crunch-and-twist-exercise-illustration-spotebi.gif"
-      },
-                {
-        muscle: " גב תחתון + ישבן         ",
-        nameHe: " גוד מורנינג                  ",
-        nameEn: " Good Morning                   ",
-        timeReps: " 10–12 חזרות                ",
-        instructions: " עמוד זקוף, כפות רגליים ברוחב אגן, מוט/משקולות קלות על הגב העליון. שמור גב ניטרלי ובטן אסופה, ודחוף את האגן לאחור תוך כיפוף קל בברכיים עד שהגב כמעט מקביל לרצפה. עלה חזרה לזקיפה מלאה תוך הפעלת ישבן וגב תחתון. יש להימנע מקימור גב או עומס יתר. ",
-        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/7.gif"
-      },
-                {
-        muscle: " אלכסוני בטן             ",
-        nameHe: " טוויסט רוסי                  ",
-        nameEn: " Russian Twist                  ",
-        timeReps: " 12–16 חזרות לכל צד         ",
-        instructions: " שב על הרצפה, רגליים כפופות ומורמות קלות (או מונחות לקרקע להקלה), גב בזווית לאחור. החזק משקולת/כדור או ללא ציוד, וסובב את פלג הגוף העליון מצד לצד בנשימה סדירה, תוך שמירה על גב ארוך ובטן אסופה. אל תקרוס עם הגב לאחור. ",
-        imageURL: "https://media.self.com/photos/602fea82c49f836c6103b131/master/w_1600%2Cc_limit/russian-twist-no-weight-Amanda_047.gif"
-      },
-                {
-        muscle: " גב תחתון + ליבה         ",
-        nameHe: " בירד דוג סטטי (יד–רגל נגדית) ",
-        nameEn: " Quadruped Opposite Arm/Leg Hold",
-        timeReps: " 15–20 שניות לכל צד         ",
-        instructions: " עמוד על 4, ידיים מתחת לכתפיים וברכיים מתחת לאגן. מתח יד קדמית ורגל אחורית נגדית בקו ישר, שמור צוואר ניטרלי ובטן אסופה. החזק את המנח 15–20 שניות, חזור באיטיות וחלף צד. הקפד שלא להטות אגן או לקמר גב. ",
-        imageURL: "https://cdn.mos.cms.futurecdn.net/6cTqFSzt97kkYX8Vqoavh.jpg"
-      },
-                {
-        muscle: " ליבה קדמית + כתפיים     ",
-        nameHe: " פלאנק עם נגיעות כתף          ",
-        nameEn: " Plank with Shoulder Tap        ",
-        timeReps: " 20–30 שניות / 8–10 נגיעות ",
-        instructions: " התמקם בפלאנק גבוה (כפות ידיים מתחת לכתפיים, גוף בקו ישר). שמור אגן יציב ובטן אסופה, והרם יד אחת לגעת בכתף נגדית לסירוגין. בצע באיטיות, תוך שליטה מלאה וללא סיבוב אגן. שמור על נשימה סדירה. ",
-        imageURL: "https://media.self.com/photos/58fa4df75d8a5e34a74a4cbc/master/w_1600%2Cc_limit/strongest-self-shoulder-tap.gif"
-      },
-                {
-        muscle: " ישבן (Glute Medius)      ",
-        nameHe: " הרחקת ירך בשכיבה על הצד      ",
-        nameEn: " Side-Lying Hip Abduction       ",
-        timeReps: " 12–15 חזרות לכל רגל        ",
-        instructions: " שכב על הצד, רגל תחתונה כפופה מעט ורגל עליונה ישרה. שמור גוף מיושר ובטן אסופה, והרם את הרגל העליונה בקו ישר כלפי מעלה עד כ־45°. הורד מטה באיטיות ושלוט בטווח. הימנע מנדנוד או הטיית אגן אחורה/קדימה. אפשר להוסיף גומייה לקרסול להקשות. ",
-        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/1361.gif"
-      },
-        ],
-    },
-    {
       id: "A018",
       title: "אימון ליבה 5",
       emoji: "🤸‍♀️",
