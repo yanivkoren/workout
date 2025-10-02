@@ -542,4 +542,323 @@
       },
         ],
     },
+    {
+      id: "A020",
+      title: "כוח עליון שבוע 5",
+      emoji: "🏋️‍♀️",
+      minutes: 40,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: "גב – משיכה אופקית",
+        nameHe: "חתירת משקולת יד ביד אחת",
+        nameEn: "One-Arm Dumbbell Row",
+        timeReps: "4 סטים (2 לכל יד) 12 חזרות",
+        instructions: "הנח ברך וכף יד על ספסל לייצוב, הגב בזווית ישרה לקרקע, ועם היד החופשית משוך את המשקולת לכיוון הבטן התחתונה בקו צמוד לגוף. שמור על חזה פתוח, כתפיים לא מתעגלות, והימנע מתנופה בגב התחתון. נשום החוצה בזמן המשיכה, והחזר לאט למטה בשליטה. תרגיש את העבודה בעיקר בגב האמצעי והרומבואידים.",
+        imageURL: "https://fitliferegime.com/wp-content/uploads/2023/05/One-Arm-Dumbbell-Row.gif"
+      },
+                {
+        muscle: "חזה עליון",
+        nameHe: "לחיצת חזה בשיפוע חיובי עם משקוליות",
+        nameEn: "Incline Dumbbell Press",
+        timeReps: "3–4 סטים × 8–10 חזרות",
+        instructions: "שב על ספסל בשיפוע חיובי (כ־30°), אחוז משקוליות ליד החזה, ודחוף אותן מעלה בקו אלכסוני עד שהידיים כמעט ישרות. שמור על כפות ידיים פונות קדימה, עצור לרגע למעלה, והורד חזרה לאט עד שהמרפקים בקו מעט מתחת לכתפיים. שמור על גב תחתון צמוד לספסל והימנע מקשת מיותרת. נשוף בזמן הלחיצה. תרגיש את העבודה בעיקר בחזה העליון.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/DB_INC_BP.gif"
+      },
+                {
+        muscle: "כתף קדמית",
+        nameHe: "לחיצת ארנולד עם משקוליות",
+        nameEn: "Arnold Press",
+        timeReps: "3–4 סטים × 10–12 חזרות",
+        instructions: "שב על ספסל זקוף עם משקוליות בידיים בגובה כתפיים, כפות ידיים פונות אליך. התחל בלחיצה מעלה תוך כדי סיבוב כפות הידיים כך שבסוף התנועה הן פונות קדימה. עצור רגע למעלה ואז הורד לאט חזרה בתנועה הפוכה. שמור על בטן אסופה וגב זקוף, והימנע מנעילת מרפקים. תרגיש את העבודה בעיקר בכתף הקדמית.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/ARNOLD_DB_PRESS.gif"
+      },
+                {
+        muscle: "בייספס – ראש קצר",
+        nameHe: "כפיפת מרפקים על ספסל סקוט",
+        nameEn: "Preacher Curl (Dumbbell/Barbell)",
+        timeReps: "3 סטים × 10–12 חזרות",
+        instructions: "שב על ספסל סקוט, הנח את הזרועות על הכרית הקדמית, ואחוז במוט EZ או משקולת יד. התחל ממרפקים כמעט ישרים וכפוף אותם מעלה תוך כיווץ הבייספס עד לגובה הכתף. עצור רגע בחלק העליון, ואז הורד לאט את המשקולת עד שהמרפקים כמעט מתיישרים. שמור על תנועה נקייה, בלי להרים מרפקים מהכרית. נשוף בזמן הכיפוף. תרגיש את העבודה בעיקר בבייספס הראש הקצר.",
+        imageURL: "https://www.inspireusafoundation.org/file/2023/02/close-grip-preacher-curl.gif"
+      },
+                {
+        muscle: "טרייספס – ראש לטרלי",
+        nameHe: "פשיטת מרפקים בשכיבה עם מוט EZ",
+        nameEn: "Skull Crushers",
+        timeReps: "3–4 סטים × 8–12 חזרות",
+        instructions: "שכב על ספסל שטוח, אחוז במוט EZ באחיזה צרה, והחזק אותו מעל החזה עם ידיים ישרות. כופף מרפקים והורד את המוט לכיוון המצח או מעט מאחוריו תוך שמרפקים יציבים בקו כתפיים. דחוף חזרה מעלה עד ליישור כמעט מלא של הידיים. שמור על שליטה, הימנע מתנועת כתפיים ותנופה. נשוף בזמן הדחיפה. תרגיש את העבודה בצד החיצוני של הטרייספס.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/SKULL_CRUSH.gif"
+      },
+                {
+        muscle: "ייצוב שכמות",
+        nameHe: "Serratus Punch עם משקוליות",
+        nameEn: "Dumbbell Serratus Punch",
+        timeReps: "3 סטים × 12–15 חזרות",
+        instructions: "שכב על הגב על ספסל, אחוז משקולת קלה בכל יד ודחוף אותן ישר למעלה עם מרפקים נעולים. מהעמדה הזו בצע תנועה קטנה נוספת של -ניקוב- כלפי מעלה על ידי התרוממות קלה של השכמות מהספסל. עצור רגע למעלה, ואז החזר חזרה באיטיות. שמור על מרפקים ישרים ולא לכפוף את הידיים. נשום החוצה בזמן הדחיפה. תרגיש את העבודה בעיקר בסראטוס אנטריור ובייצוב השכמות.",
+        imageURL: "https://cdn.shopify.com/s/files/1/0618/9462/3460/files/supine-punch-plus.gif?v=1751010571"
+      },
+        ],
+    },
+    {
+      id: "A021",
+      title: "כוח תחתון שבוע 5",
+      emoji: "🏋️‍♀️",
+      minutes: 40,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: "ישבן",
+        nameHe: "גשר ישבן עם משקולית יד",
+        nameEn: "Dumbbell Glute Bridge",
+        timeReps: "3 סטים × 12 חזרות",
+        instructions: "שכב על הגב עם ברכיים כפופות וכפות רגליים שטוחות על הרצפה. הנח משקולת יד על הירכיים מעל עצמות האגן. לחץ דרך העקבים והרם את האגן כלפי מעלה עד שהגוף יוצר קו ישר מהברכיים לכתפיים. החזק רגע בכיווץ ישבן, ואז הורד חזרה לאט. שמור על גב תחתון ניטרלי, הימנע מקשת חזקה בגב, ונשוף בזמן הדחיפה. תרגיש את העבודה בעיקר בישבן הגדול (Gluteus Maximus).",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2022/01/Dumbbell-Glute-Bridge.gif"
+      },
+                {
+        muscle: "ארבע ראשי",
+        nameHe: "מכונת פשיטת ברך",
+        nameEn: "Leg Extension Machine",
+        timeReps: "3 סטים × 12 חזרות",
+        instructions: "שב במכונת פשיטת ברך עם גב צמוד למשענת וברכיים מיושרות מול ציר המכשיר. מקם את כרית הקרסול מעט מעל כף הרגל. פשט את הברכיים עד יישור כמעט מלא, עצור רגע למעלה, ואז הורד חזרה לאט עד כמעט 90°. שמור על גב יציב ולא לקמר, הימנע מבעיטות מהירות. נשוף בזמן הפשיטה. תרגיש את העבודה בעיקר בחלק הקדמי של הירך (Quadriceps).",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif"
+      },
+                {
+        muscle: "ירך אחורית",
+        nameHe: "כפיפת רגליים במכונה",
+        nameEn: "Lying Leg Curl Machine",
+        timeReps: "3 סטים × 12 חזרות",
+        instructions: "שכב על הבטן במכונת כפיפת רגליים, ברכיים בקו ציר המכשיר, קרסוליים מתחת לכרית. כפוף את הברכיים והבא את העקבים לכיוון הישבן בתנועה איטית. עצור רגע בכיווץ עליון, ואז הורד לאט חזרה עד כמעט יישור. שמור על אגן צמוד למכשיר, הימנע מהרמה של הירכיים. נשוף בזמן הכיפוף. תרגיש את העבודה בהמסטרינגס.",
+        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHK1HxRH5eV1_5SJ4irnZjc7kbnf2SZTNzw&s"
+      },
+                {
+        muscle: "שוק אחורי (Soleus)",
+        nameHe: "הרמת עקבים בישיבה",
+        nameEn: "Seated Calf Raise",
+        timeReps: "3 סטים × 12 חזרות",
+        instructions: "שב על מכונת הרמות עקבים או ספסל עם משקולת על הברכיים. כפות רגליים שטוחות על מדרגה קטנה. הרם את העקבים מעלה כמה שיותר גבוה, עצור לשנייה, ואז הורד לאט עד מתיחה מקסימלית. שמור על ברכיים כפופות לאורך כל התרגיל כדי לבודד את הסולאוס. הימנע מתנודות מהירות. נשוף בזמן ההרמה. תרגיש את העבודה בעיקר בשוק הפנימי (Soleus).",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/10/Weighted-Seated-Calf-Raise.gif"
+      },
+                {
+        muscle: "מסובבי ירך חיצוניים",
+        nameHe: "Monster Walk עם גומייה",
+        nameEn: "Banded Monster Walk",
+        timeReps: "2 סטים × 20 צעדים לכל כיוון",
+        instructions: "לבש גומייה סביב הברכיים או הקרסוליים, התמקם בעמידת חצי־סקוואט, גב זקוף, ברכיים מעט כפופות. צעד קדימה ואלכסונית לצדדים תוך שמירה על מתח קבוע בגומייה. הקפד שהברכיים לא יקרסו פנימה. נשום בקצב אחיד ושמור על שליטה בתנועה. תרגיש את העבודה בעיקר במסובבי הירך החיצוניים ובצד הישבן.",
+        imageURL: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2020/06/GRT-2.09.BandedMonsterWalk.gif"
+      },
+                {
+        muscle: "חוטפים",
+        nameHe: "הליכת מפלצת עם גומייה (צידית)",
+        nameEn: "Banded Monster Walk (Lateral)",
+        timeReps: "2 סטים × 20 צעדים לכל כיוון",
+        instructions: "הנח גומייה סביב הברכיים או הקרסוליים, התמקם בתנוחת חצי־סקוואט. צעד הצידה עם רגל אחת, אחריה הרגל השנייה, תוך שמירה על מתח קבוע בגומייה. שמור על חזה פתוח וגב זקוף, והימנע מקפיצות. נשוף בכל צעד. תרגיש את העבודה בעיקר בחוטפים (Gluteus Medius) ובשרירי ייצוב האגן.",
+        imageURL: "https://media1.popsugar-assets.com/files/thumbor/-tzT2CWUg3Vm0dZxjA-q0rykWcU=/fit-in/792x792/filters:format_auto():upscale()/2024/09/17/821/n/1922729/tmp_qECwxw_c8ded86aa2cea5f3_PS23_Fitness_Workout_07_Move_09_Band_Walk.gif"
+      },
+        ],
+    },
+    {
+      id: "A022",
+      title: "כוח משולב שבוע 5",
+      emoji: "🏋️‍♀️",
+      minutes: 40,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: "גב – משיכה אנכית",
+        nameHe: "משיכת פולי עליון רחב",
+        nameEn: "Wide-Grip Lat Pulldown",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "שב זקוף במכונת פולי עליון, אחוז את המוט רחב מעט מכתפיים, משוך מטה לכיוון החזה תוך שמירה על גב זקוף ומרפקים מובלים מטה. עצור בכיווץ תחתון, החזר לאט למעלה עד מתיחה מלאה. הימנע ממשיכת יתר עם פלג גוף עליון. נשוף בזמן המשיכה. תרגיש את העבודה בעיקר בלטיסימוס ובגב העליון.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif"
+      },
+                {
+        muscle: "חזה תחתון",
+        nameHe: "דיפס על מקבילים",
+        nameEn: "Dips",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "עלה על מקבילים, זרועות ישרות, הורד את הגוף מטה בכיפוף מרפקים ונטייה קלה קדימה עד שהמרפקים ב־90°. דחוף חזרה למעלה עד יישור כמעט מלא. שמור על חזה פתוח, מרפקים לא נפתחים לצדדים. נשוף בזמן הדחיפה. תרגיש את העבודה בחזה התחתון ובטרייספס.",
+        imageURL: "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2024/11/assisted.dip_.gif?fit=600%2C589&ssl=1"
+      },
+                {
+        muscle: "כתף אמצעית",
+        nameHe: "Upright Row עם מוט EZ",
+        nameEn: "Upright Row (EZ Bar)",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "עמוד זקוף, אחוז מוט EZ באחיזה צרה, משוך אותו מעלה לאורך הגוף עד גובה החזה. שמור על מרפקים מובילים מעלה החוצה, עצור רגע ואז הורד באיטיות. שמור על גב זקוף, לא למשוך יתר על הכתפיים. נשוף בזמן המשיכה. תרגיש את העבודה בעיקר בכתף האמצעית ובטרפז.",
+        imageURL: "https://static.wixstatic.com/media/11c3fa_dd73ff368c344c25988ebcc2dc0b4f4a~mv2.gif"
+      },
+                {
+        muscle: "בייספס (Brachialis)",
+        nameHe: "כפיפת מרפק בהיפוך אחיזה",
+        nameEn: "Reverse Curl (EZ Bar)",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "אחוז במוט EZ באחיזה הפוכה (כפות ידיים מטה), עמוד זקוף, וכפוף את המרפקים כלפי מעלה עד גובה החזה. עצור רגע בכיווץ ואז הורד באיטיות. שמור על מרפקים צמודים לגוף ולא לנפנף. נשוף בזמן הכיפוף. תרגיש את העבודה בעיקר ב־Brachialis ובאמות.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Reverse-Grip-EZ-Bar-Curl.gif"
+      },
+                {
+        muscle: "ישבן",
+        nameHe: "דדליפט סומו עם משקוליות",
+        nameEn: "Dumbbell Sumo Deadlift",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "עמוד בפיסוק רחב, החזק משקולת בכל יד לפני הגוף. ירד מטה בהטיית אגן וגב ישר עד שהמשקולות קרובות לרצפה, ואז דחוף דרך העקבים לעלייה. שמור על חזה פתוח וגב ניטרלי, הימנע מהתכופפות בגב תחתון. נשוף בזמן העלייה. תרגיש את העבודה בישבן ובמקרבי הירך.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/DB_SM_DL.gif"
+      },
+                {
+        muscle: "ירך אחורית",
+        nameHe: "דדליפט רומני עם משקוליות",
+        nameEn: "Romanian Deadlift (Dumbbell)",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "עמוד זקוף עם משקולת בכל יד צמוד לירכיים. שמור על ברכיים כפופות קלות, הטה את האגן לאחור והורד את המשקולות לאורך הירכיים עד מתיחה בהמסטרינגס. חזור מעלה בפשיטת ירך מלאה. שמור על גב ישר וחזה פתוח, הימנע מכיפוף יתר. נשוף בזמן העלייה. תרגיש את העבודה בהמסטרינגס ובישבן.",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/DB_RM_DL.gif"
+      },
+                {
+        muscle: "שוק אחורי (Gastrocnemius)",
+        nameHe: "הרמות עקב בעמידה עם משקוליות",
+        nameEn: "Standing Dumbbell Calf Raise",
+        timeReps: "2 סטים × 12 חזרות",
+        instructions: "החזק משקולת בכל יד בעמידה, כפות רגליים על מדרגה קטנה. הרם את העקבים מעלה ככל האפשר, עצור לרגע, ואז הורד לאט מתחת לגובה המדרגה. שמור על ברכיים ישרות. נשוף בזמן ההרמה. תרגיש את העבודה בעיקר בגסטרוקנמיוס.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Calf-Raise.gif"
+      },
+                {
+        muscle: "מקרבי ירך",
+        nameHe: "Copenhagen Plank",
+        nameEn: "Copenhagen Plank",
+        timeReps: "2 סטים - אחד לכל צד × 15 חזרות לכל צד",
+        instructions: "שכיבה על הצד, רגל עליונה מונחת על ספסל, מרפק תחתון נשען מתחת לכתף. הרם את האגן מעלה עד שהגוף בקו ישר. החזק רגע והורד באיטיות. בצע 15 חזרות לכל צד. שמור על בטן אסופה, לא לקרוס בגב תחתון. תרגיש את העבודה במקרבי הירך וברצועת הליבה הצדית.",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2025/03/Side-Plank-Hip-Adduction-Copenhagen-adduction.gif"
+      },
+        ],
+    },
+    {
+      id: "A023",
+      title: "אימון ליבה 1",
+      emoji: "🤸‍♀️",
+      minutes: 10,
+      category: "אימון ליבה",
+      locations: ["home","gym"],
+      exercises: 
+        [
+                {
+        muscle: "סרעפת",
+        nameHe: "נשימה סרעפתית בישיבה",
+        nameEn: "Seated Diaphragmatic Breathing",
+        timeReps: "2 סטים × 6–8 נשימות עמוקות",
+        instructions: "שב זקוף, כפות רגליים על הקרקע, יד אחת על החזה ואחת על הבטן. שאף עמוק דרך האף כך שהבטן מתמלאת קדימה, החזק שנייה, נשוף לאט דרך הפה עד לריקון מלא. שמור על כתפיים רפויות, הימנע מתנועת יתר בחזה. התרכז בתחושה של התרחבות הצלעות התחתונות.",
+        imageURL: "https://miro.medium.com/v2/resize:fit:1200/1*IDVPqo6WJYMug_TbMT2wrQ.gif"
+      },
+                {
+        muscle: "בטן – אנטי־סיבוב",
+        nameHe: "בירד דוג עם השהיה",
+        nameEn: "Bird Dog with Hold",
+        timeReps: "2 סטים × 8–10 חזרות לכל צד (החזקת 2–3 שניות בכל חזרה)",
+        instructions: "עמוד על שש, כפות ידיים מתחת לכתפיים וברכיים מתחת לאגן. מתח יד קדימה ורגל נגדית לאחור עד שהן בקו אחד עם הגוף, החזק 2–3 שניות וחזור לאט. שמור על גב ישר ובטן אסופה, הימנע מקימור או קשת בגב. נשוף בזמן ההארכה. תרגיש את העבודה בליבה ובגב התחתון.",
+        imageURL: "https://cdn-life.dailyburn.com/life/wp-content/uploads/2018/02/10003804/bird-dog.gif"
+      },
+                {
+        muscle: "בטן תחתונה",
+        nameHe: "הרמות רגליים בתלייה",
+        nameEn: "Hanging Straight Leg Raise",
+        timeReps: "2 סטים × 8–12 חזרות",
+        instructions: "אחוז במתח באחיזה עליונה, שמור על גוף יציב. הרם רגליים ישרות מעלה עד גובה אגן או מעט מעבר, עצור לשנייה ואז הורד לאט עד כמעט למטה. שמור על בטן אסופה, הימנע מתנופה. נשוף בזמן ההרמה. תרגיש את העבודה בבטן התחתונה ובכפיפי הירך.",
+        imageURL: "https://www.verywellfit.com/thmb/wY2NmB0-W3tCxZDntFbRtzUZHMQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/42-3498291-Captains-Chair-Leg-Raises-GIF-a2f30dc759fe474c94893c8bd19abecb.gif"
+      },
+                {
+        muscle: "בטן תחתונה (חלופה לבית)",
+        nameHe: "Reverse Crunch עם בעיטה מעלה",
+        nameEn: "Reverse Crunch with Leg Kick",
+        timeReps: "2 סטים × 12–15 חזרות",
+        instructions: "שכב על הגב, ברכיים כפופות 90°. הרם את האגן מהרצפה תוך בעיטה מעלה של הרגליים. עצור רגע בכיווץ, החזר את האגן לאט לרצפה. שמור על גב תחתון צמוד למזרן, הימנע מנדנוד. נשוף בזמן ההרמה. תרגיש את העבודה בעיקר בבטן התחתונה.",
+        imageURL: "https://media1.popsugar-assets.com/files/thumbor/tDsuLRyHzhSA_nFMNR0yrjAfsfA/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2021/08/13/796/n/1922729/663c713b67ccac48_IMB_khEK1p/i/Reverse-Crunch-to-Heel-Drop.GIF"
+      },
+                {
+        muscle: "גב תחתון",
+        nameHe: "סופרמן הולד",
+        nameEn: "Superman Hold",
+        timeReps: "2 סטים × 15–20 שניות החזקה או 10–12 חזרות דינמיות",
+        instructions: "שכב על הבטן, ידיים קדימה, רגליים ישרות לאחור. הרם יחד ידיים ורגליים מעלה, החזק שנייה או שתיים, ואז הורד לאט. שמור על צוואר נייטרלי, אל תרים את הראש יתר על המידה. נשוף בזמן ההרמה. תרגיש את העבודה בזוקפי הגב ובישבן.",
+        imageURL: "https://www.meridian-fitness.co.uk/wp-content/uploads/2025/01/Superman.gif"
+      },
+                {
+        muscle: "בטן – לחץ תוך־בטני",
+        nameHe: "Hollow Body Hold",
+        nameEn: "Hollow Body Hold",
+        timeReps: "2 סטים × 20–30 שניות החזקה",
+        instructions: "שכב על הגב, הרם רגליים ישרות מעט מעל הרצפה וידיים קדימה/מעל הראש. הדבק גב תחתון לרצפה, שמור על סנטר מעט פנימה. אחוז במנח הזה תוך נשימה רגילה. הימנע מקשת בגב התחתון. תרגיש את העבודה חזק בבטן הקדמית.",
+        imageURL: "https://www.garagegymreviews.com/wp-content/uploads/2023/10/bent-knee-hollow-body-hold.gif"
+      },
+                {
+        muscle: "אגן/כפיפת ירך",
+        nameHe: "L-Sit Hold",
+        nameEn: "L-Sit Hold",
+        timeReps: "2 סטים × 10–20 שניות החזקה",
+        instructions: "שב בין מקבילים או הישען על כפות ידיים בצדדים, הרם רגליים ישרות קדימה בזווית 90° והחזק. שמור על גב זקוף ובטן אסופה. נשום רגיל לאורך ההחזקה. תרגיש את העבודה בכפיפי הירך ובבטן התחתונה. חלופות למתחילים: Tuck Sit Hold (ברכיים כפופות לחזה), One-Leg L-Sit (רגל אחת ישרה, אחת כפופה), או Parallel Support Hold (תמיכה עם רגליים נשענות קלות ברצפה).",
+        imageURL: "https://liftmanual.com/wp-content/uploads/2023/04/l-sit.gif"
+      },
+        ],
+    },
+    {
+      id: "A024",
+      title: "אימון ליבה 2",
+      emoji: "🤸‍♀️",
+      minutes: 10,
+      category: "אימון ליבה",
+      locations: ["home","gym"],
+      exercises: 
+        [
+                {
+        muscle: "בטן – כפיפה קדמית",
+        nameHe: "כפיפת בטן באלכסון",
+        nameEn: "Oblique Crunch",
+        timeReps: "2 סטים × 12–15 חזרות לכל צד",
+        instructions: "שכב על הגב, ברכיים כפופות, כף יד אחת ליד הראש והשנייה מונחת לצידך. עלה באלכסון, מרפק לכיוון הברך הנגדית, תוך שמירה על תנועה מבוקרת וללא משיכה בצוואר. שאף בירידה ונשוף בעלייה. תרגיש את העבודה בבטן ובאלכסונים.",
+        imageURL: "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2020/12/Oblique-crunch.gif?fit=600%2C600&ssl=1"
+      },
+                {
+        muscle: "אגן ומותן – ייצוב/הטיות אגן",
+        nameHe: "גוד מורנינג (משקל גוף)",
+        nameEn: "Good Morning (Bodyweight)",
+        timeReps: "2 סטים × 12–15 חזרות",
+        instructions: "עמוד זקוף, כפות רגליים ברוחב אגן, ידיים מאחורי הראש או על החזה. הטה את האגן לאחור תוך שמירה על גב ישר, עד שהגב כמעט מקביל לרצפה. חזור חזרה לעמידה זקופה בכיווץ ישבן. הימנע מכיפוף בגב תחתון. נשוף בזמן העלייה.",
+        imageURL: "https://images.squarespace-cdn.com/content/v1/5ebef943272c1041d83b1d15/1597757459702-87IBL12SOMBP82EGOAVO/Good+Morning+Exercise.gif"
+      },
+                {
+        muscle: "בטן – אנטי־סיבוב",
+        nameHe: "בירד דוג עם השהיה",
+        nameEn: "Bird Dog with Hold",
+        timeReps: "2 סטים × 8–10 חזרות לכל צד (החזקה 2–3 שניות בכל חזרה)",
+        instructions: "התמקם בעמידת שש – כפות ידיים מתחת לכתפיים וברכיים מתחת לאגן. מתח יד קדימה ורגל נגדית לאחור עד שהן בקו ישר עם הגוף. החזק 2–3 שניות, שמור על גב ניטרלי ובטן אסופה, חזור באיטיות וחליף צד. הימנע מקימור או קשת בגב. נשוף בזמן ההארכה.",
+        imageURL: "https://cdn-life.dailyburn.com/life/wp-content/uploads/2018/02/10003804/bird-dog.gif"
+      },
+                {
+        muscle: "גב תחתון – ייצוב דינמי",
+        nameHe: "סופרמן הולד",
+        nameEn: "Superman Hold",
+        timeReps: "2 סטים × 12–15 חזרות דינמיות או 15–20 שניות אחיזה",
+        instructions: "שכב על הבטן, ידיים קדימה ורגליים ישרות לאחור. הרם יחד ידיים ורגליים מהרצפה עד שנוצר קשת קלה בגב, עצור רגע ואז הורד חזרה. שמור על צוואר ניטרלי וראש בהמשך לעמוד השדרה. נשוף בזמן ההרמה. תרגיש את העבודה בזוקפי הגב ובישבן.",
+        imageURL: "https://www.meridian-fitness.co.uk/wp-content/uploads/2025/01/Superman.gif"
+      },
+                {
+        muscle: "גב תחתון – אנטי־כיפוף קדמי",
+        nameHe: "פלאנק עם נגיעות כתף",
+        nameEn: "Plank with Shoulder Tap",
+        timeReps: "2 סטים × 8–12 נגיעות לכל צד",
+        instructions: "התמקם בפלאנק גבוה – ידיים מתחת לכתפיים, גוף בקו ישר. הרם יד אחת ונגע בכתף הנגדית, החזר בעדינות והחלף צד. שמור על אגן יציב, בלי סיבוב או קריסה. נשום באופן רציף, הימנע מהחזקת אוויר. תרגיש את העבודה בליבה הקדמית והצדית.",
+        imageURL: "https://media.self.com/photos/5a1495c8e91faa1fe331591b/master/w_1600%2Cc_limit/new-years-challenge-t-shoulder-tap.gif"
+      },
+                {
+        muscle: "שרירים תומכים – אנטי־כיפוף צדי",
+        nameHe: "Suitcase Hold",
+        nameEn: "Suitcase Hold",
+        timeReps: "2 סטים × 20–30 שניות לכל צד",
+        instructions: "עמוד זקוף, החזק משקולת יד אחת (או בקבוק מים כבד) בצד הגוף. שמור על גב ישר וכתפיים מאוזנות, אל תטה את הגוף לצד. החזק סטטית את המנח. נשום רגיל לאורך כל הזמן. תרגיש את העבודה בצד הליבה ובשרירי הייצוב של האגן.",
+        imageURL: "https://liftmanual.com/wp-content/uploads/2023/04/dumbbell-suitcase-carry.gif"
+      },
+        ],
+    },
 ];
