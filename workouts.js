@@ -127,6 +127,199 @@
         ],
     },
     {
+      id: "A001",
+      title: "כוח עליון שבוע 2",
+      emoji: "🏋️‍♀️",
+      minutes: 80,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: " גב – משיכה אופקית ",
+        nameHe: " חתירת T במכשיר                      ",
+        nameEn: " T-Bar Row Machine           ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " שב עם חזה צמוד למשענת ורגליים יציבות על הרצפה, אחוז בידיות והתחל למשוך אותן לכיוון החזה התחתון תוך שמירה על גב ניטרלי וכתפיים לא משוחררות קדימה. הקפד לקרב שכמות בסוף התנועה ולהחזיר את הידיות לאט ובשליטה מלאה מבלי לאבד מתח. ",
+        imageURL: "https://cdn.shopify.com/s/files/1/0618/9462/3460/files/remada-pronada-maquina_chest_supported_Rows_gif___Google_Search.gif"
+      },
+                {
+        muscle: " חזה עליון       ",
+        nameHe: " פריסת כבלים בשיפוע חיובי במכשיר    ",
+        nameEn: " Incline Cable Fly Machine   ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " שב על הספסל המשופע כשגבך צמוד למשענת, אחוז בידיות עם כיפוף קל במרפקים והבא את הידיים קדימה בתנועה אלכסונית כלפי מעלה עד שהן כמעט נפגשות. עצור רגע בכיווץ, ולאחר מכן פתח חזרה את הידיים לצדדים באיטיות תוך שליטה מלאה ושמירה על מרפקים מעט כפופים לאורך כל התרגיל. ",
+        imageURL: "https://www.inspireusafoundation.org/file/2023/08/pronated-grip-cable-fly.gif"
+      },
+                {
+        muscle: " כתף קדמית       ",
+        nameHe: " לחיצת ארנולד במכשיר משולב           ",
+        nameEn: " Arnold Press Machine        ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " שב זקוף עם גב צמוד למשענת והחזק את הידיות מול החזה בכפיפה. סובב את כפות הידיים כלפי חוץ תוך כדי דחיפה של המשקל מעל הראש עד ליישור כמעט מלא של המרפקים. הקפד לשמור על תנועה חלקה ומבוקרת, על בטן אסופה וכתפיים שאינן קופצות למעלה. ",
+        imageURL: "https://liftmanual.com/wp-content/uploads/2023/04/lever-seated-shoulder-press.gif"
+      },
+                {
+        muscle: " בייספס – ראש קצר ",
+        nameHe: " כפיפת מרפקים במכשיר סקוט            ",
+        nameEn: " Preacher Curl Machine       ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " שב כאשר החלק העליון של הזרועות מונח על משטח הסקוט והחזק את הידיות באחיזה תחתית. כופף את המרפקים והעלה את המשקל כלפי מעלה עד כיווץ מלא של הבייספס. החזר לאט ובשליטה את הידיות למטה עד ליישור כמעט מלא, מבלי להניח למשקל ליפול. הקפד לשמור על כתפיים רפויות ונשימה סדירה. ",
+        imageURL: "https://www.inspireusafoundation.org/file/2023/02/close-grip-preacher-curl.gif"
+      },
+                {
+        muscle: " טרייספס – ראש לטרלי ",
+        nameHe: " לחיצת חזה צרה במכשיר               ",
+        nameEn: " Close-Grip Chest Press Machine ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " שב זקוף עם גב צמוד למשענת, אחוז את הידיות במרחק צר ביניהן ודחוף אותן קדימה עד ליישור כמעט מלא של המרפקים. שמור על מרפקים קרובים לגוף לכל אורך התנועה ועל שליטה מלאה בהחזרה אחורה. הקפד לא לנעול מרפקים בסוף התנועה ולשמור על נשימה רציפה. ",
+        imageURL: "https://cdn.jefit.com/assets/img/exercises/gifs/1180.gif"
+      },
+                {
+        muscle: " ייצוב שכמות     ",
+        nameHe: " Face Pull במכשיר כבלים ייעודי       ",
+        nameEn: " Face Pull Machine           ",
+        timeReps: " 3 סטים × 12 חזרות ",
+        instructions: " עמוד מול המכשיר כאשר הכבל בגובה הפנים, אחוז בידיות באחיזה מעלית והמשוך לאחור לעבר הפנים תוך פיסוק מרפקים לצדדים. הדגש פתיחת כתפיים וקירוב שכמות בסוף התנועה. החזר את הידיות קדימה באיטיות מבלי לאבד מתח, שמור על גב זקוף ובטן אסופה לאורך כל התרגיל. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif"
+      },
+        ],
+    },
+    {
+      id: "A002",
+      title: "כוח תחתון שבוע 2",
+      emoji: "🏋️‍♀️",
+      minutes: 80,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: " ישבן (Gluteus)        ",
+        nameHe: " לחיצת ירך במכשיר                 ",
+        nameEn: " Hip Thrust Machine             ",
+        timeReps: " 3×12              ",
+        instructions: " שב כשהגב העליון נתמך, כפות הרגליים ברוחב אגן והברכיים כפופות, דחוף את האגן מעלה עד ליישור מלא של הירכיים תוך כיווץ הישבן בחוזקה למעלה, החזר לאט מטה בשליטה תוך שמירה על גב ניטרלי ובטן אסופה, הקפד לא להקפיץ את המשקל אלא לשלוט בתנועה לכל אורכה. ",
+        imageURL: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/hip-thrust-a-la-machine.gif"
+      },
+                {
+        muscle: " ארבע ראשי (Quadriceps)",
+        nameHe: " פשיטת ברכיים במכשיר             ",
+        nameEn: " Leg Extension Machine          ",
+        timeReps: " 3×12              ",
+        instructions: " שב זקוף כשהגב צמוד למשענת וכפות הרגליים מתחת לכריות, מתח את הברכיים קדימה עד ליישור מלא תוך שמירה על כיווץ בשרירי הירך הקדמיים, עצור לשנייה בחלק העליון והחזר את הרגליים מטה באיטיות, תוך שליטה מלאה וללא נעילת ברכיים. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif"
+      },
+                {
+        muscle: " ירך אחורית (Hamstrings)",
+        nameHe: " כפיפת ברכיים בשכיבה             ",
+        nameEn: " Lying Leg Curl Machine         ",
+        timeReps: " 3×12              ",
+        instructions: " שכב על הבטן כשהעקב מתחת לכריות המכשיר, כופף את הברכיים מעלה עד לכיווץ מלא של שרירי הירך האחוריים, עצור בחלק העליון לשנייה והחזר לאט מטה תוך שליטה מלאה וללא קפיצות, שמור על אגן צמוד לספסל ובטן אסופה לאורך כל התנועה. ",
+        imageURL: "https://burnfit.io/wp-content/uploads/2023/11/LEG_CURL.gif"
+      },
+                {
+        muscle: " שוק אחורי (Calves)   ",
+        nameHe: " הרמות עקבים                     ",
+        nameEn: " Standing Calf Raise            ",
+        timeReps: " 3×12              ",
+        instructions: " עמוד זקוף עם כפות הרגליים ברוחב אגן, עלה על קצות האצבעות עד למקסימום גובה תוך כיווץ שרירי השוק האחוריים, החזק שנייה למעלה וחזור לאט מטה עד מתיחה מלאה בעקבים, הקפד לשמור על ברכיים מתוחות אך לא נעולות ותנועה מבוקרת לכל אורך הטווח. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Calf-Raise.gif"
+      },
+                {
+        muscle: " מסובבי ירך חיצוניים  ",
+        nameHe: " סיבוב חיצוני בירך במכשיר כבלים  ",
+        nameEn: " Cable Hip External Rotation    ",
+        timeReps: " 3×12              ",
+        instructions: " עמוד בצד למכשיר עם רצועת קרסול מחוברת לרגל הרחוקה, שמור על יציבה זקופה ובטן אסופה, סובב את הירך החוצה כך שכף הרגל והברך פונים כלפי חוץ, עצור בקצה הטווח והחזר את הרגל פנימה באיטיות, הקפד על טווח תנועה קטן ומדויק ועל שליטה מלאה לאורך כל הביצוע. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2022/02/Resistance-Band-Foot-External-Rotation.gif"
+      },
+                {
+        muscle: " חוטפים (Abductors)   ",
+        nameHe: " כבלים – הרחקת ירך בעמידה         ",
+        nameEn: " Standing Cable Hip Abduction   ",
+        timeReps: " 3×12              ",
+        instructions: " עמוד זקוף ליד המכשיר עם רצועת קרסול מחוברת לרגל החיצונית, שמור על גב ישר ובטן אסופה, הרחק את הרגל הצידה באיטיות עד קצה טווח התנועה תוך שמירה על אגן יציב, עצור לשנייה בחלק החיצוני והחזר את הרגל פנימה בשליטה, הקפד לא להטות את הגוף לצד אלא להפעיל את שרירי הירך החיצוניים בלבד. ",
+        imageURL: "https://newlife.com.cy/wp-content/uploads/2019/12/08791301-Cable-hip-abduction-version-2_Hips_360.gif"
+      },
+        ],
+    },
+    {
+      id: "A003",
+      title: "כוח משולב שבוע 2",
+      emoji: "🏋️‍♀️",
+      minutes: 80,
+      category: "אימון כח",
+      locations: ["gym"],
+      exercises: 
+        [
+                {
+        muscle: " גב – משיכה אנכית ",
+        nameHe: " משיכת פולי עליון צר             ",
+        nameEn: " Close-Grip Lat Pulldown      ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " שב זקוף כאשר כפות הרגליים על הרצפה, אחוז בידית V, משוך מטה אל מרכז החזה תוך שמירה על מרפקים קרובים לגוף. הקפד לשמור על גב זקוף, שליטה בירידה, ולנשום החוצה במאמץ. ",
+        imageURL: "https://cdn.shopify.com/s/files/1/0250/0362/2496/files/1204.gif?v=1644907658"
+      },
+                {
+        muscle: " חזה תחתון         ",
+        nameHe: " פליי כבלים גבוה־לנמוך          ",
+        nameEn: " High-to-Low Cable Fly        ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " עמוד בין שני כבלים גבוהים, אחוז בידיות והבא אותן מטה בקשת אל מול המותניים. שמור על מרפקים מעט כפופים ותנועה איטית ומבוקרת. נשום החוצה בזמן הקירוב ופנימה בזמן החזרה. ",
+        imageURL: "https://fitliferegime.com/wp-content/uploads/2023/06/High-To-Low-Cable-fly.gif"
+      },
+                {
+        muscle: " כתף אמצעית        ",
+        nameHe: " הרחקות צד בכבל                 ",
+        nameEn: " Cable Lateral Raise          ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " עמוד זקוף, אחוז בידית כבל נמוך ביד אחת והרם את היד הצידה עד גובה הכתף. שמור על מרפק מעט כפוף, תנועה איטית ומבוקרת ללא ניפנוף, ובטן אסופה ליציבות. נשום סדיר לאורך כל התרגיל. ",
+        imageURL: "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2020/03/cable-lateral-raise.gif?fit=600%2C600&ssl=1"
+      },
+                {
+        muscle: " בייספס (Brachialis) ",
+        nameHe: " כפיפת מרפקים בכבל תחתון       ",
+        nameEn: " Cable Reverse Curl           ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " עמוד זקוף מול כבל תחתון עם מוט ישר, אחוז באחיזה הפוכה (כפות ידיים כלפי מטה) וכופף את המרפקים מעלה. שמור על מרפקים צמודים לגוף, שלוט בחזרה מטה, ונשום החוצה במאמץ. ",
+        imageURL: "https://fitnessprogramer.com/wp-content/uploads/2022/02/Cable-Reverse-Grip-EZ-bar-Biceps-Curl.gif"
+      },
+                {
+        muscle: " ישבן              ",
+        nameHe: " בעיטת ירך לאחור במכשיר         ",
+        nameEn: " Glute Kickback Machine       ",
+        timeReps: " 3 סטים × 12 חזרות לכל רגל ",
+        instructions: " עמוד עם חזה צמוד לריפוד, הנח את כף הרגל על הפלטפורמה ודחוף לאחור ולמעלה עד ליישור הירך. שמור על גב ניטרלי, חזור לאט קדימה, ונשום החוצה בזמן הדחיפה. ",
+        imageURL: "https://i.pinimg.com/originals/df/f0/21/dff02169d4b40b7b5df0f8c80b17e115.gif"
+      },
+                {
+        muscle: " ירך אחורית        ",
+        nameHe: " כפיפת ברכיים על כדור יציבה     ",
+        nameEn: " Stability Ball Hamstring Curl ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " שכב על הגב, הנח עקבים על כדור יציבה והרם את האגן לגשר. גלגל את הכדור פנימה תוך כיפוף ברכיים ושמירה על אגן יציב. חזור לאט ליישור. שמור על בטן אסופה ונשימה רציפה. ",
+        imageURL: "https://cdn.prod.openfit.com/uploads/2017/12/bb_stability-ball_hamstring-roll-out.gif"
+      },
+                {
+        muscle: " שוק אחורי (Calves) ",
+        nameHe: " הרמות עקבים על BOSU           ",
+        nameEn: " Calf Raise on BOSU           ",
+        timeReps: " 3 סטים × 12–15 חזרות  ",
+        instructions: " עמוד על כיפת ה־BOSU ברוחב אגן, הרם עקבים מעלה על קצות האצבעות, עצור לשנייה למעלה והורד מטה למתיחה מלאה. שמור על ברכיים מעט כפופות, גב זקוף ותנועה איטית ומבוקרת. ",
+        imageURL: "https://blog.weightlossmadepractical.com/wp-content/uploads/2022/03/How-to-do-a-Bosu-standing-calf-raise.gif"
+      },
+                {
+        muscle: " מקרבי ירך (Adductors) ",
+        nameHe: " סקוואט סומו עם לחיצה פנימה ",
+        nameEn: " Sumo Squat with Inward Press ",
+        timeReps: " 3 סטים × 12 חזרות     ",
+        instructions: " עמוד בפיסוק רחב, בצע סקוואט סומו עד שהירכיים במקביל לרצפה. בעלייה חזור למעלה תוך הפעלת לחץ קל פנימה עם הברכיים להפעלת המקרבים. שמור על גב זקוף ובטן אסופה לאורך כל התרגיל. ",
+        imageURL: "https://www.verywellfit.com/thmb/-i6U4nnLmsBUIqs8SvuUyhEkMeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79--Sumo-SquatGIF-df6fd051e5c1451f93e6e5fa5b6b420f.gif"
+      },
+        ],
+    },
+    {
       id: "A004",
       title: "אירובי אליפטיקל",
       emoji: "➿",
